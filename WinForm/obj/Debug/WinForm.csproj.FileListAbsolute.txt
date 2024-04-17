@@ -1,0 +1,10 @@
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\bin\Debug\WinForm.exe.config
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\bin\Debug\WinForm.exe
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\bin\Debug\WinForm.pdb
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.exe
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.pdb
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.Form1.resources
