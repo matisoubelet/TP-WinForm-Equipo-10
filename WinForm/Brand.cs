@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WinForm
 {
-    internal class Categoria
+    internal class Brand
     {
+        private int id;
+        private string name;
+        private string desc;
     }
 }

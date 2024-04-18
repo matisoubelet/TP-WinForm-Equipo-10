@@ -35,7 +35,13 @@
             this.flpLista = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.artPreview = new System.Windows.Forms.Panel();
             this.pnlLista.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.artPreview.SuspendLayout();
             this.SuspendLayout();
             // 
             // TxtBoxBuscarArticulo
@@ -112,6 +118,52 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 113);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Location = new System.Drawing.Point(5, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Location = new System.Drawing.Point(83, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // artPreview
+            // 
+            this.artPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.artPreview.Controls.Add(this.label2);
+            this.artPreview.Controls.Add(this.label1);
+            this.artPreview.Controls.Add(this.pictureBox1);
+            this.artPreview.Location = new System.Drawing.Point(466, 12);
+            this.artPreview.Name = "artPreview";
+            this.artPreview.Padding = new System.Windows.Forms.Padding(5);
+            this.artPreview.Size = new System.Drawing.Size(125, 125);
+            this.artPreview.TabIndex = 0;
+            this.artPreview.Visible = false;
             // 
             // Form1
             // 
@@ -119,6 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 549);
+            this.Controls.Add(this.artPreview);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pnlLista);
@@ -131,6 +184,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlLista.ResumeLayout(false);
             this.pnlLista.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.artPreview.ResumeLayout(false);
+            this.artPreview.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +201,10 @@
         private System.Windows.Forms.FlowLayoutPanel flpLista;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel artPreview;
     }
 }
 

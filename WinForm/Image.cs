@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WinForm
 {
-    internal class Imagen
+    internal class Image
     {
+        private int id;
+        private int articleID;
+        private string imageUrl;
     }
 }

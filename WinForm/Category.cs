@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WinForm
 {
-    internal class Marca
+    internal class Category
     {
+        private int id;
+        private string name;
+        private string desc;
     }
 }
