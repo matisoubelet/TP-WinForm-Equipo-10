@@ -34,5 +34,7 @@ namespace WinForm
             price = random.Next(1000);
 
         }
+
+   
     }
 }

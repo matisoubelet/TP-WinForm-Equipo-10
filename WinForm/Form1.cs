@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinForm
 {
@@ -25,7 +26,14 @@ namespace WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            CmbCategory.Items.Add("Celular");
+            CmbCategory.Items.Add("TV");
+            CmbCategory.Items.Add("Ventilador");
+            CmbBrand.Items.Add("Samsung");
+            CmbBrand.Items.Add("Sony");
+            CmbBrand.Items.Add("Ken Brown");
+
+     
         }
 
         private void AgregarArticulo()
@@ -83,6 +91,37 @@ namespace WinForm
                 }
             }
             
+        }
+
+        private void CmbBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            Article article = new Article();
+
+            string brandName = article.brand.getName();
+
+            int index = CmbBrand.SelectedIndex;
+
+
+            if (CmbBrand.Items[index].ToString() == brandName)
+            {
+                //Logica para mostrar el cuadro del producto
+            }
+           
+        }
+
+        private void CmbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Article article = new Article();
+            string categoryName = article.category.getName();
+
+            int index = CmbCategory.SelectedIndex;
+
+
+            if (CmbCategory.Items[index].ToString() == categoryName)
+            {
+                //Logica para mostrar el cuadro del producto
+            }
         }
     }
 }

@@ -14,5 +14,9 @@ namespace WinForm
 
 
         public void setId(int _id) { id = _id; }
+
+        public string getName() { return name; }
+        
+
     }
 }
