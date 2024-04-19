@@ -40,13 +40,17 @@ namespace WinForm
         {
             AddArticle addArticle = new AddArticle();
             addArticle.ShowDialog();
-            Panel previewPanel = new Panel();
-            ArticlePreview artPreview = new ArticlePreview(addArticle.newArticle, ref previewPanel);
 
-            flpLista.SuspendLayout();
-            flpLista.Controls.Add(previewPanel);
-            flpLista.ResumeLayout(true);
-            UpdateFlpListaArticle();
+            if (addArticle.newArticle.code != null)
+            {
+                Panel previewPanel = new Panel();
+                ArticlePreview artPreview = new ArticlePreview(addArticle.newArticle, ref previewPanel);
+
+                flpLista.SuspendLayout();
+                flpLista.Controls.Add(previewPanel);
+                flpLista.ResumeLayout(true);
+                UpdateFlpListaArticle();
+            }
         }
 
         private void EliminarArticulo()

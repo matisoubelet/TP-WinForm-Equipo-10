@@ -30,3 +30,14 @@ C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Nuev
 C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Nueva carpeta (2)\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Nueva carpeta (2)\WinForm-C-\WinForm\obj\Debug\WinForm.exe
 C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Nueva carpeta (2)\WinForm-C-\WinForm\obj\Debug\WinForm.pdb
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\bin\Debug\WinForm.exe.config
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\bin\Debug\WinForm.exe
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\bin\Debug\WinForm.pdb
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.AssemblyReference.cache
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.AddArticle.resources
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.Form1.resources
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.GenerateResource.cache
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.exe
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.pdb

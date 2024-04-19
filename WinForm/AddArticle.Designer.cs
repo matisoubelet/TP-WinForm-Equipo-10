@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnImg = new System.Windows.Forms.Button();
+            this.pctrBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Agregar
@@ -50,7 +52,7 @@
             this.Agregar.AccessibleName = "btnAdd";
             this.Agregar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Agregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Agregar.Location = new System.Drawing.Point(105, 396);
+            this.Agregar.Location = new System.Drawing.Point(105, 454);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(94, 45);
             this.Agregar.TabIndex = 0;
@@ -62,12 +64,13 @@
             // 
             this.button2.AccessibleName = "btnCancel";
             this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.Location = new System.Drawing.Point(225, 396);
+            this.button2.Location = new System.Drawing.Point(225, 454);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 45);
             this.button2.TabIndex = 1;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tbxCode
             // 
@@ -183,12 +186,23 @@
             // 
             this.btnImg.AccessibleName = "btnImg";
             this.btnImg.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnImg.Location = new System.Drawing.Point(149, 305);
+            this.btnImg.Location = new System.Drawing.Point(65, 330);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(134, 30);
             this.btnImg.TabIndex = 14;
             this.btnImg.Text = "Agregar Imagen";
             this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
+            // 
+            // pctrBox
+            // 
+            this.pctrBox.AccessibleName = "pctrBox";
+            this.pctrBox.Location = new System.Drawing.Point(224, 277);
+            this.pctrBox.Name = "pctrBox";
+            this.pctrBox.Size = new System.Drawing.Size(150, 150);
+            this.pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrBox.TabIndex = 15;
+            this.pctrBox.TabStop = false;
             // 
             // AddArticle
             // 
@@ -196,7 +210,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(452, 476);
+            this.ClientSize = new System.Drawing.Size(452, 527);
+            this.Controls.Add(this.pctrBox);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -215,6 +230,7 @@
             this.Name = "AddArticle";
             this.Text = "AddArticle";
             this.Load += new System.EventHandler(this.AddArticle_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +253,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnImg;
+        private System.Windows.Forms.PictureBox pctrBox;
     }
 }

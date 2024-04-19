@@ -51,5 +51,37 @@ namespace WinForm
             cboxBrand.Items.Add(5);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            newArticle.code = null;
+            this.Close();
+        }
+
+        private void btnImg_Click(object sender, EventArgs e)
+        {
+            //Guarda una imagen (de momento una sola, pero tienen que ser varias, o se podrian
+            //añadir al editar el articulo)
+
+            //AUN NO GUARDA LA IMAGEN EN NINGUN LADO!!!!!
+
+            string imageLocation = "";
+            try
+            {   //Pide que se ingrese la ubicacion de la imagen que se esta buscando, y especifica el tipo de archivo que acepta
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files|*.png| All files(*.*)|*.*";
+
+                if(dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //Si todo esta bien, toma la img y la guarda en el PictureBox
+                    imageLocation = dialog.FileName;
+                    pctrBox.ImageLocation = imageLocation;
+                }
+            }
+            catch (Exception) 
+            { 
+                //En caso de error, enseña estos textos en lugar de romper
+                MessageBox.Show("Ocurrio un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
