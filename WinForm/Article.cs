@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace WinForm
 {
-    internal class Article
+    public class Article
     {
 
         public int id; // Unique, identity (1,1)
         public string code; //Maximo 50 caracteres (en la tabla aparecen codigos de 3, ejemplo: SO1, MO2
         public string name; //Maximo 50 caracteres
         public string desc; //Maximo 50 caracteres
-        public Brand brand; // Clase de donde se puede linkear el IdMarca con el IdArticulo
-        public Category category; //Clase de donde se puede linkear el IdCategoria con el IdArticulo
+        public Brand brand = new Brand(); // Clase de donde se puede linkear el IdMarca con el IdArticulo
+        public Category category = new Category(); //Clase de donde se puede linkear el IdCategoria con el IdArticulo
         public float price; // Que sea mayor a cero
 
         private static Random random = new Random();

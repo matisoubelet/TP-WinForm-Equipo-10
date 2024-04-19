@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace WinForm
 {
-    internal class Brand
+    public class Brand
     {
         private int id;
         private string name;
         private string desc;
+
+
+        public void setId(int _id) { id = _id; }
     }
 }

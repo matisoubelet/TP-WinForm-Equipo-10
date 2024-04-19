@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace WinForm
 {
-    internal class Category
+    public class Category
     {
         private int id;
         private string name;
         private string desc;
+
+
+        public void setId(int _id) { id = _id; }
     }
+
+    
 }

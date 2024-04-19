@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddArticle.Designer.cs">
+      <DependentUpon>AddArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Article.cs" />
     <Compile Include="ArticlePreview.cs" />
     <Compile Include="Brand.cs" />
@@ -59,6 +65,9 @@
     <Compile Include="Image.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddArticle.resx">
+      <DependentUpon>AddArticle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,17 +25,15 @@ namespace WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            AgregarArticulo();
-            AgregarArticulo();
-            AgregarArticulo();
-            AgregarArticulo();
+            
         }
 
         private void AgregarArticulo()
         {
-            Article article = new Article();
+            AddArticle addArticle = new AddArticle();
+            addArticle.ShowDialog();
             Panel previewPanel = new Panel();
-            ArticlePreview artPreview = new ArticlePreview(article, ref previewPanel);
+            ArticlePreview artPreview = new ArticlePreview(addArticle.newArticle, ref previewPanel);
 
             flpLista.SuspendLayout();
             flpLista.Controls.Add(previewPanel);
