@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\",
+  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|c:\\users\\matis\\desktop\\zerafin\\facultad\\materias\\programacion iii\\winform\\codigo\\repo\\winform-c-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,39 +30,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AddArticle.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs",
               "RelativeDocumentMoniker": "WinForm\\AddArticle.cs",
-              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs",
               "RelativeToolTip": "WinForm\\AddArticle.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAcwD4AAAArAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAswB4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T22:42:09.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T22:42:09.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AddArticle.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs",
               "RelativeDocumentMoniker": "WinForm\\AddArticle.cs",
-              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs [Design]",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs [Design]",
               "RelativeToolTip": "WinForm\\AddArticle.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T22:41:15.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Article.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Article.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Article.cs",
               "RelativeDocumentMoniker": "WinForm\\Article.cs",
-              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Article.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Article.cs",
               "RelativeToolTip": "WinForm\\Article.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -70,26 +69,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs",
               "RelativeDocumentMoniker": "WinForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs",
               "RelativeToolTip": "WinForm\\Form1.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDQAAAANAAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAowB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T01:29:26.467Z"
+              "WhenOpened": "2024-04-17T01:29:26.467Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs",
               "RelativeDocumentMoniker": "WinForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs [Design]",
               "RelativeToolTip": "WinForm\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T01:08:53.293Z"
+              "WhenOpened": "2024-04-17T01:08:53.293Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
