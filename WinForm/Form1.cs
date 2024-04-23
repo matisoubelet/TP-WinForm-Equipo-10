@@ -12,12 +12,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ModelDomain;
+using DBAccess;
 
 namespace WinForm
 {
     public partial class Form1 : Form
     {
         static private int previewArtSize = 125;
+        ArticleDBAccess dbAccess = new ArticleDBAccess();
+        List<ArticlePreview> artPreviews = new List<ArticlePreview>();
 
         public Form1()
         {
@@ -26,22 +30,43 @@ namespace WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //inicializa los filter dropdowns; deberia leerlos desde la base de datos
+            //inicializa los filter dropdowns
 
             CmbCategory.Items.Add("Ninguna"); //esta opcion desactiva el filtro
-            CmbCategory.Items.Add("Celular");
-            CmbCategory.Items.Add("TV");
-            CmbCategory.Items.Add("Ventilador");
-            CmbCategory.SelectedIndex = 0; //selecciona la primera opcion por defecto
-
             CmbBrand.Items.Add("Ninguna"); //esta opcion desactiva el filtro
-            CmbBrand.Items.Add("Samsung");
-            CmbBrand.Items.Add("Sony");
-            CmbBrand.Items.Add("Ken Brown");
+
+            foreach (Category category in dbAccess.ListCategories())
+            {
+                CmbCategory.Items.Add(category);
+            }            
+            foreach (Brand brand in dbAccess.ListBrands())
+            {
+                CmbBrand.Items.Add(brand);
+            }
+
+            CmbCategory.SelectedIndex = 0; //selecciona la primera opcion por defecto
             CmbBrand.SelectedIndex = 0; //selecciona la primera opcion por defecto
+
+            LoadDBArticles();
         }
 
-        private void AgregarArticulo()
+        private void LoadDBArticles()
+        {
+            List<Article> list = dbAccess.ListArticles();
+
+            flpLista.SuspendLayout();
+            foreach (Article article in list)
+            {
+                Panel previewPanel = new Panel();
+                ArticlePreview artPreview = new ArticlePreview(article, ref previewPanel);
+                artPreviews.Add(artPreview);
+                flpLista.Controls.Add(previewPanel);
+            }
+            flpLista.ResumeLayout(true);
+            UpdateFlpListaArticle();
+        }
+
+        private void AddNewArticle()
         {
             //crea la ventana con el nuevo articulo
             AddArticle addArticle = new AddArticle();
@@ -67,7 +92,7 @@ namespace WinForm
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarArticulo();
+            AddNewArticle();
         }
 
         private void flpLista_SizeChanged(object sender, EventArgs e)
@@ -100,9 +125,9 @@ namespace WinForm
         private void CmbBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Article article = new Article();
+            /*Article article = new Article();
 
-            string brandName = article.brand.getName();
+            //string brandName = article.brand.getName();
 
             int index = CmbBrand.SelectedIndex;
 
@@ -110,7 +135,7 @@ namespace WinForm
             if (CmbBrand.Items[index].ToString() == brandName)
             {
                 //Logica para mostrar el cuadro del producto
-            }
+            }*/
 
             //este codigo deberia cambiar un bool brandFilter = true si ->
             //(cmbbrand.items[cmbbrand.selectedindex].tostring() == "Ninguna")
@@ -124,8 +149,8 @@ namespace WinForm
 
         private void CmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Article article = new Article();
-            string categoryName = article.category.getName();
+            /*Article article = new Article();
+            //string categoryName = article.category.getName();
 
             int index = CmbCategory.SelectedIndex;
 
@@ -133,7 +158,7 @@ namespace WinForm
             if (CmbCategory.Items[index].ToString() == categoryName)
             {
                 //Logica para mostrar el cuadro del producto
-            }
+            }*/
 
             //este codigo deberia cambiar un bool categoryFilter = true si ->
             //(cmbcategory.items[cmbcategory.selectedindex].tostring() == "Ninguna")

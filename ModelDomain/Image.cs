@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinForm
+namespace ModelDomain
 {
-    internal class Image
+    public class Image
     {
-        private int id;
-        private int articleID;
-        private string imageUrl;
+        public int id;
+        public int articleID;
+        public string imageUrl;
     }
 }

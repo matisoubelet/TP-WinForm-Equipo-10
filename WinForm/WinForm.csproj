@@ -53,17 +53,13 @@
     <Compile Include="AddArticle.Designer.cs">
       <DependentUpon>AddArticle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Article.cs" />
     <Compile Include="ArticlePreview.cs" />
-    <Compile Include="Brand.cs" />
-    <Compile Include="Category.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Image.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddArticle.resx">
@@ -93,6 +89,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBAccess\DBAccess.csproj">
+      <Project>{b277b3e3-7d6e-49fa-89ce-f3f5038072af}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelDomain\ModelDomain.csproj">
+      <Project>{b8d6a80a-8317-4deb-a537-772fc9fa9267}</Project>
+      <Name>ModelDomain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

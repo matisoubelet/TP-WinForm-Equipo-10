@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ModelDomain;
+using DBAccess;
 
 namespace WinForm
 {
@@ -29,8 +31,8 @@ namespace WinForm
             newArticle.name = tbxName.Text;
             newArticle.desc = tbxDesc.Text;
             newArticle.price = float.Parse(tbxPrice.Text);
-            newArticle.brand.setId(int.Parse(cboxBrand.SelectedItem.ToString()));
-            newArticle.category.setId(int.Parse(cboxCat.SelectedItem.ToString()));
+            newArticle.idBrand = int.Parse(cboxBrand.SelectedItem.ToString());
+            newArticle.idCategory = int.Parse(cboxCat.SelectedItem.ToString());
             this.Close();
         }
 

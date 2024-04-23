@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ModelDomain;
 
 namespace WinForm
 {
@@ -15,7 +16,7 @@ namespace WinForm
         public Panel panel;
         public string name;
         public float price;
-        public System.Drawing.Image image;
+        public string url; //conectar con la lista de images
 
         public ArticlePreview(Article article, ref Panel panel)
         {
@@ -27,6 +28,11 @@ namespace WinForm
             ConfigPreview();
         }
 
+        public ArticlePreview()
+        {
+
+        }
+
         private void ConfigPreview()
         {
             panel.SuspendLayout();
@@ -36,7 +42,7 @@ namespace WinForm
 
             PictureBox previewPic = new PictureBox()
             {
-                Image = image,
+                //load from url
                 Anchor = AnchorStyles.None,
                 BackColor = Color.Thistle,
                 Dock = DockStyle.Fill,
