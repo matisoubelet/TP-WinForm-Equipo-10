@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBAccess;
 using ModelDomain;
 
 namespace WinForm
@@ -16,14 +17,16 @@ namespace WinForm
         public Panel panel;
         public string name;
         public float price;
-        public string url; //conectar con la lista de images
+        public string url; 
 
-        public ArticlePreview(Article article, ref Panel panel)
+        public ArticlePreview(Article article, Img image, ref Panel panel)
         {
             artID = article.id;
             this.panel = panel;
             name = article.name;
             price = article.price;
+            url = image.imageUrl;
+            
 
             ConfigPreview();
         }
@@ -42,12 +45,23 @@ namespace WinForm
 
             PictureBox previewPic = new PictureBox()
             {
-                //load from url
                 Anchor = AnchorStyles.None,
                 BackColor = Color.Thistle,
                 Dock = DockStyle.Fill,
-                Size = new Size(500, 500)
+                Size = new Size(500, 500),
+                SizeMode = PictureBoxSizeMode.StretchImage
             };
+
+            try
+            {
+                previewPic.Load(url);
+            }
+            catch(Exception ex)
+            {
+                //throw ex;
+            }
+            
+
             Label artName = new Label();
             Label artPrice = new Label();
 

@@ -41,6 +41,19 @@ namespace DBAccess
             }
         }
 
+        public void ExecuteAction()
+        {
+            command.Connection = connection;
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void CloseConnection()
         {
             reader?.Close();
@@ -66,8 +79,6 @@ namespace DBAccess
                     aux.idBrand = reader.GetInt32(4);
                     aux.idCategory = reader.GetInt32(5);
                     aux.price = (float)reader.GetDecimal(6);
-
-                    Debug.WriteLine("lolololol");
                     list.Add(aux);
                 }
                 return list;
@@ -80,7 +91,37 @@ namespace DBAccess
             {
                 CloseConnection();
             }
-        }        
+        }
+        
+        public List<Img> ListImages()
+        {
+            List<Img> listImages = new List<Img>();
+
+            try
+            {
+                SetQuery("select * from IMAGENES");
+                ExecuteRead();
+
+                while (reader.Read())
+                {
+                    Img aux = new Img();
+                    aux.id = reader.GetInt32(0);
+                    aux.articleID = reader.GetInt32(1);
+                    aux.imageUrl = reader.GetString(2);
+                    listImages.Add(aux);
+                }
+                
+                return listImages;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
         
         public List<Brand> ListBrands()
         {
@@ -140,29 +181,16 @@ namespace DBAccess
                 CloseConnection();
             }
         }        
-        
-        public List<Image> ListImages()
-        {
-            List<Image> list = new List<Image>();
 
+        public int LastArticleId()
+        {
             try
             {
-                SetQuery("select * from Imagenes");
+                SetQuery("select top 1 ID from ARTICULOS order by id desc");
                 ExecuteRead();
-
-                while (reader.Read())
-                {
-                    Image aux = new Image();
-
-                    aux.id = reader.GetInt32(0);
-                    aux.articleID = reader.GetInt32(1);
-                    aux.imageUrl = reader.GetString(2);
-
-                    list.Add(aux);
-                }
-                return list;
+                return reader.GetInt32(0);
             }
-            catch(Exception ex)
+            catch(Exception ex )
             {
                 throw ex;
             }
@@ -172,9 +200,23 @@ namespace DBAccess
             }
         }
 
-        public void Add(Article article)
+        public void InsertArticle(Article article, Img image)
         {
-
+            try
+            {
+                SetQuery("Insert into ARTICULOS values('" + article.code + "','" + article.name + "', '" + article.desc + "'," + article.idBrand + "," + article.idCategory + "," + article.price + ")");
+                ExecuteAction();
+                SetQuery("Insert into IMAGENES values(" + image.articleID + ", '"+ image.imageUrl +"')");
+                ExecuteAction();
+            }
+            catch(Exception ex) 
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

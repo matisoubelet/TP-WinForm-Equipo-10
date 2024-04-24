@@ -1,19 +1,11 @@
-﻿using System;
+﻿using DBAccess;
+using ModelDomain;
+using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using ModelDomain;
-using DBAccess;
 
 namespace WinForm
 {
@@ -53,15 +45,26 @@ namespace WinForm
         private void LoadDBArticles()
         {
             List<Article> list = dbAccess.ListArticles();
-
+            List<Img> image = dbAccess.ListImages();
+            Img placeholder = new Img();
             flpLista.SuspendLayout();
+
             foreach (Article article in list)
             {
+                foreach (Img img in image)
+                {
+                    if (article.id == img.articleID)
+                    {
+                        placeholder = img;  
+                    }
+                }
                 Panel previewPanel = new Panel();
-                ArticlePreview artPreview = new ArticlePreview(article, ref previewPanel);
+                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel);
                 artPreviews.Add(artPreview);
                 flpLista.Controls.Add(previewPanel);
             }
+            
+
             flpLista.ResumeLayout(true);
             UpdateFlpListaArticle();
         }
@@ -78,12 +81,15 @@ namespace WinForm
                 //si no es asi, creamos un nuevo panel, y una preview de articulo
                 //para vincular un articulo en la base de datos con un panel en la lista
                 Panel previewPanel = new Panel();
-                ArticlePreview artPreview = new ArticlePreview(addArticle.newArticle, ref previewPanel);
+                ArticlePreview artPreview = new ArticlePreview(addArticle.newArticle,addArticle.newImage, ref previewPanel);
                 //al crear la preview, se encarga de vincular el articleID con el panel en lista
 
                 flpLista.SuspendLayout();
                 flpLista.Controls.Add(previewPanel);
                 flpLista.ResumeLayout(true);
+
+                dbAccess.InsertArticle(addArticle.newArticle, addArticle.newImage);
+
                 UpdateFlpListaArticle();
 
                 //por aca deberiamos agregar el articulo creado a la base de datos, no solo en la app

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelDomain
 {
-    public class Image
+    public class Img
     {
         public int id;
         public int articleID;

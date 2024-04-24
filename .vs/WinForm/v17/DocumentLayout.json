@@ -1,46 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\",
+  "WorkspaceRootPath": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B277B3E3-7D6E-49FA-89CE-F3F5038072AF}|DBAccess\\DBAccess.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\dbaccess\\articledbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B277B3E3-7D6E-49FA-89CE-F3F5038072AF}|DBAccess\\DBAccess.csproj|solutionrelative:dbaccess\\articledbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\winform\\articlepreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|c:\\users\\matis\\desktop\\zerafin\\facultad\\materias\\programacion iii\\winform\\codigo\\repo\\winform-c-\\winform\\articlepreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\articlepreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\modeldomain\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|solutionrelative:modeldomain\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\modeldomain\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|solutionrelative:modeldomain\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\modeldomain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|solutionrelative:modeldomain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|c:\\users\\andre\\onedrive\\documentos\\prog3\\repositorios\\actividad2\\winform-c-\\modeldomain\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8D6A80A-8317-4DEB-A537-772FC9FA9267}|ModelDomain\\ModelDomain.csproj|solutionrelative:modeldomain\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B277B3E3-7D6E-49FA-89CE-F3F5038072AF}|DBAccess\\DBAccess.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\dbaccess\\articledbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B277B3E3-7D6E-49FA-89CE-F3F5038072AF}|DBAccess\\DBAccess.csproj|solutionrelative:dbaccess\\articledbaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A1540D1-5140-4F71-B0C1-D41EA98539D5}|WinForm\\WinForm.csproj|solutionrelative:winform\\addarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,135 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArticleDBAccess.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\DBAccess\\ArticleDBAccess.cs",
-              "RelativeDocumentMoniker": "DBAccess\\ArticleDBAccess.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\DBAccess\\ArticleDBAccess.cs",
-              "RelativeToolTip": "DBAccess\\ArticleDBAccess.cs",
-              "ViewState": "AQIAAJsAAAAAAAAAAAAAALAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "AddArticle.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs",
+              "RelativeDocumentMoniker": "WinForm\\AddArticle.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs [Design]",
+              "RelativeToolTip": "WinForm\\AddArticle.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:45:59.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Brand.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Brand.cs",
-              "RelativeDocumentMoniker": "ModelDomain\\Brand.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Brand.cs",
-              "RelativeToolTip": "ModelDomain\\Brand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:44:08.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T02:07:54.018Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AddArticle.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs",
               "RelativeDocumentMoniker": "WinForm\\AddArticle.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\AddArticle.cs",
               "RelativeToolTip": "WinForm\\AddArticle.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAE4AAAA6AAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCUAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T22:42:09.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs",
-              "RelativeDocumentMoniker": "WinForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs",
-              "RelativeToolTip": "WinForm\\Form1.cs",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAqwFAAAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T01:29:26.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs",
-              "RelativeDocumentMoniker": "WinForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\Form1.cs [Design]",
-              "RelativeToolTip": "WinForm\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T01:08:53.293Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArticlePreview.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\ArticlePreview.cs",
-              "RelativeDocumentMoniker": "WinForm\\ArticlePreview.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\ArticlePreview.cs",
-              "RelativeToolTip": "WinForm\\ArticlePreview.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAswCwAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:44:58.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Category.cs",
-              "RelativeDocumentMoniker": "ModelDomain\\Category.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Category.cs",
-              "RelativeToolTip": "ModelDomain\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:44:11.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T22:42:09.865Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Article.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Article.cs",
-              "RelativeDocumentMoniker": "ModelDomain\\Article.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Article.cs",
-              "RelativeToolTip": "ModelDomain\\Article.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "Title": "ArticleDBAccess.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\DBAccess\\ArticleDBAccess.cs",
+              "RelativeDocumentMoniker": "DBAccess\\ArticleDBAccess.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\DBAccess\\ArticleDBAccess.cs",
+              "RelativeToolTip": "DBAccess\\ArticleDBAccess.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAYwNEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:44:01.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T00:45:59.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Image.cs",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Image.cs",
-              "RelativeDocumentMoniker": "ModelDomain\\Image.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\ModelDomain\\Image.cs",
-              "RelativeToolTip": "ModelDomain\\Image.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAcAAAA",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Form1.cs",
+              "RelativeDocumentMoniker": "WinForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\Form1.cs",
+              "RelativeToolTip": "WinForm\\Form1.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwEcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T00:44:15.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T01:29:26.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AddArticle.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs",
-              "RelativeDocumentMoniker": "WinForm\\AddArticle.cs",
-              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documentos\\PROG3\\Repositorios\\actividad2\\WinForm-C-\\WinForm\\AddArticle.cs [Design]",
-              "RelativeToolTip": "WinForm\\AddArticle.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "ArticlePreview.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\ArticlePreview.cs",
+              "RelativeDocumentMoniker": "WinForm\\ArticlePreview.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Zerafin\\Facultad\\Materias\\Programacion III\\WinForm\\Codigo\\Repo\\WinForm-C-\\WinForm\\ArticlePreview.cs",
+              "RelativeToolTip": "WinForm\\ArticlePreview.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDMAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T22:41:15.83Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-23T00:44:58.007Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -20,7 +20,9 @@ namespace WinForm
             InitializeComponent();
         }
 
+        ArticleDBAccess dbAccess = new ArticleDBAccess();
         public Article newArticle = new Article();
+        public Img newImage = new Img();
 
         public void Agregar_Click(object sender, EventArgs e)
         { 
@@ -33,6 +35,7 @@ namespace WinForm
             newArticle.price = float.Parse(tbxPrice.Text);
             newArticle.idBrand = int.Parse(cboxBrand.SelectedItem.ToString());
             newArticle.idCategory = int.Parse(cboxCat.SelectedItem.ToString());
+            newImage.articleID = dbAccess.LastArticleId() + 1;
             this.Close();
         }
 
@@ -66,7 +69,6 @@ namespace WinForm
 
             //AUN NO GUARDA LA IMAGEN EN NINGUN LADO!!!!!
 
-            string imageLocation = "";
             try
             {   //Pide que se ingrese la ubicacion de la imagen que se esta buscando, y especifica el tipo de archivo que acepta
                 OpenFileDialog dialog = new OpenFileDialog();
@@ -75,8 +77,8 @@ namespace WinForm
                 if(dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     //Si todo esta bien, toma la img y la guarda en el PictureBox
-                    imageLocation = dialog.FileName;
-                    pctrBox.ImageLocation = imageLocation;
+                    newImage.imageUrl = dialog.FileName;
+                    pctrBox.ImageLocation = newImage.imageUrl;
                 }
             }
             catch (Exception) 
