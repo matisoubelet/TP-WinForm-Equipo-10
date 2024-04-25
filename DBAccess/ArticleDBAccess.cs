@@ -182,13 +182,18 @@ namespace DBAccess
             }
         }        
 
-        public int LastArticleId()
+        public int GetLastArticleId()
         {
             try
             {
                 SetQuery("select top 1 ID from ARTICULOS order by id desc");
                 ExecuteRead();
-                return reader.GetInt32(0);
+
+                while (reader.Read())
+                {
+                    return reader.GetInt32(0);
+                }
+                return -1;
             }
             catch(Exception ex )
             {
@@ -206,10 +211,22 @@ namespace DBAccess
             {
                 SetQuery("Insert into ARTICULOS values('" + article.code + "','" + article.name + "', '" + article.desc + "'," + article.idBrand + "," + article.idCategory + "," + article.price + ")");
                 ExecuteAction();
-                SetQuery("Insert into IMAGENES values(" + image.articleID + ", '"+ image.imageUrl +"')");
-                ExecuteAction();
             }
             catch(Exception ex) 
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            try
+            {
+                SetQuery("Insert into IMAGENES values(" + image.articleID + ", '" + image.imageUrl + "')");
+                ExecuteAction();
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

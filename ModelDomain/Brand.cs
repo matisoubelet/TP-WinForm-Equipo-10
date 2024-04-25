@@ -15,5 +15,9 @@ namespace ModelDomain
         {
             return name;
         }
+        public int GetID()
+        {
+            return id;
+        }
     }
 }

@@ -33,32 +33,31 @@ namespace WinForm
             newArticle.name = tbxName.Text;
             newArticle.desc = tbxDesc.Text;
             newArticle.price = float.Parse(tbxPrice.Text);
-            newArticle.idBrand = int.Parse(cboxBrand.SelectedItem.ToString());
-            newArticle.idCategory = int.Parse(cboxCat.SelectedItem.ToString());
-            newImage.articleID = dbAccess.LastArticleId() + 1;
+            newArticle.idBrand = ((Brand)cboxBrand.SelectedItem).GetID();
+            newArticle.idCategory = ((Category)cboxCat.SelectedItem).GetID();
+            newImage.articleID = dbAccess.GetLastArticleId() + 1;
             this.Close();
         }
 
         private void AddArticle_Load(object sender, EventArgs e)
         {
-            //Todo esto va a ser reemplazado por los datos de la Base de Datos
-           
-            cboxCat.Items.Add(1);
-            cboxCat.Items.Add(2);
-            cboxCat.Items.Add(3);
-            cboxCat.Items.Add(4);
-            cboxCat.Items.Add(5);
+            newArticle.code = null;
 
-            cboxBrand.Items.Add(1);
-            cboxBrand.Items.Add(2);
-            cboxBrand.Items.Add(3);
-            cboxBrand.Items.Add(4);
-            cboxBrand.Items.Add(5);
+            foreach (Category category in dbAccess.ListCategories())
+            {
+                cboxCat.Items.Add(category);
+            }
+            foreach (Brand brand in dbAccess.ListBrands())
+            {
+                cboxBrand.Items.Add(brand);
+            }
+
+            cboxCat.SelectedIndex = 0; //selecciona la primera opcion por defecto
+            cboxBrand.SelectedIndex = 0; //selecciona la primera opcion por defecto
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Cancelar_Click(object sender, EventArgs e)
         {
-            newArticle.code = null;
             this.Close();
         }
 
