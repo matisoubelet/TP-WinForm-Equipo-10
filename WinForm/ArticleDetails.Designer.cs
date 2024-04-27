@@ -1,6 +1,6 @@
 ﻿namespace WinForm
 {
-    partial class AddArticle
+    partial class ArticleDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Agregar = new System.Windows.Forms.Button();
-            this.Cancelar = new System.Windows.Forms.Button();
-            this.tbxCode = new System.Windows.Forms.TextBox();
-            this.tbxName = new System.Windows.Forms.TextBox();
-            this.tbxDesc = new System.Windows.Forms.TextBox();
-            this.tbxPrice = new System.Windows.Forms.TextBox();
-            this.cboxBrand = new System.Windows.Forms.ComboBox();
-            this.cboxCat = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pctrBox = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxCode = new System.Windows.Forms.TextBox();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxName = new System.Windows.Forms.TextBox();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbxDesc = new System.Windows.Forms.TextBox();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbxPrice = new System.Windows.Forms.TextBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboxBrand = new System.Windows.Forms.ComboBox();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboxCat = new System.Windows.Forms.ComboBox();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.splitContainer16 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,8 +61,10 @@
             this.btnAddImg = new System.Windows.Forms.Button();
             this.btnPrevImg = new System.Windows.Forms.Button();
             this.tbxImg = new System.Windows.Forms.TextBox();
+            this.pctrBox = new System.Windows.Forms.PictureBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).BeginInit();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -127,180 +126,12 @@
             this.splitContainer16.Panel2.SuspendLayout();
             this.splitContainer16.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Agregar
-            // 
-            this.Agregar.AccessibleName = "btnAdd";
-            this.Agregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Agregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Agregar.BackColor = System.Drawing.Color.LightBlue;
-            this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Agregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Agregar.Location = new System.Drawing.Point(30, 20);
-            this.Agregar.MaximumSize = new System.Drawing.Size(136, 43);
-            this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(136, 43);
-            this.Agregar.TabIndex = 0;
-            this.Agregar.Text = "Confirmar";
-            this.Agregar.UseVisualStyleBackColor = false;
-            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.AccessibleName = "btnCancel";
-            this.Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cancelar.BackColor = System.Drawing.Color.LightCoral;
-            this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cancelar.Location = new System.Drawing.Point(11, 20);
-            this.Cancelar.MaximumSize = new System.Drawing.Size(136, 43);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(136, 43);
-            this.Cancelar.TabIndex = 0;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = false;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
-            // 
-            // tbxCode
-            // 
-            this.tbxCode.AccessibleName = "tbxCode";
-            this.tbxCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbxCode.Location = new System.Drawing.Point(0, 0);
-            this.tbxCode.Name = "tbxCode";
-            this.tbxCode.Size = new System.Drawing.Size(196, 20);
-            this.tbxCode.TabIndex = 0;
-            // 
-            // tbxName
-            // 
-            this.tbxName.AccessibleName = "tbxName";
-            this.tbxName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbxName.Location = new System.Drawing.Point(0, 0);
-            this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(196, 20);
-            this.tbxName.TabIndex = 0;
-            // 
-            // tbxDesc
-            // 
-            this.tbxDesc.AccessibleName = "txbDesc";
-            this.tbxDesc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbxDesc.Location = new System.Drawing.Point(0, 0);
-            this.tbxDesc.Name = "tbxDesc";
-            this.tbxDesc.Size = new System.Drawing.Size(196, 20);
-            this.tbxDesc.TabIndex = 0;
-            // 
-            // tbxPrice
-            // 
-            this.tbxPrice.AccessibleName = "tbxPrice";
-            this.tbxPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbxPrice.Location = new System.Drawing.Point(0, 0);
-            this.tbxPrice.Name = "tbxPrice";
-            this.tbxPrice.Size = new System.Drawing.Size(196, 20);
-            this.tbxPrice.TabIndex = 0;
-            // 
-            // cboxBrand
-            // 
-            this.cboxBrand.AccessibleName = "cboxBrand";
-            this.cboxBrand.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboxBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxBrand.FormattingEnabled = true;
-            this.cboxBrand.Location = new System.Drawing.Point(0, 0);
-            this.cboxBrand.Name = "cboxBrand";
-            this.cboxBrand.Size = new System.Drawing.Size(196, 21);
-            this.cboxBrand.TabIndex = 0;
-            // 
-            // cboxCat
-            // 
-            this.cboxCat.AccessibleName = "cboxCat";
-            this.cboxCat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxCat.FormattingEnabled = true;
-            this.cboxCat.Location = new System.Drawing.Point(0, 0);
-            this.cboxCat.Name = "cboxCat";
-            this.cboxCat.Size = new System.Drawing.Size(196, 21);
-            this.cboxCat.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AccessibleName = "lblCode";
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Código";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AccessibleName = "lblName";
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Nombre";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AccessibleName = "lblDesc";
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 25);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Descripción";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AccessibleName = "lblPrice";
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 25);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Precio";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AccessibleName = "lblBrand";
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 25);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Marca";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AccessibleName = "lblCategory";
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 25);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Categoría";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pctrBox
-            // 
-            this.pctrBox.AccessibleName = "pctrBox";
-            this.pctrBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pctrBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctrBox.Location = new System.Drawing.Point(0, 0);
-            this.pctrBox.Name = "pctrBox";
-            this.pctrBox.Size = new System.Drawing.Size(196, 147);
-            this.pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctrBox.TabIndex = 15;
-            this.pctrBox.TabStop = false;
             // 
             // splitContainer1
             // 
@@ -317,9 +148,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(412, 487);
-            this.splitContainer1.SplitterDistance = 400;
-            this.splitContainer1.TabIndex = 16;
+            this.splitContainer1.Size = new System.Drawing.Size(429, 494);
+            this.splitContainer1.SplitterDistance = 405;
+            this.splitContainer1.TabIndex = 17;
             // 
             // splitContainer3
             // 
@@ -336,8 +167,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer3.Size = new System.Drawing.Size(412, 400);
-            this.splitContainer3.SplitterDistance = 165;
+            this.splitContainer3.Size = new System.Drawing.Size(429, 405);
+            this.splitContainer3.SplitterDistance = 167;
             this.splitContainer3.TabIndex = 0;
             // 
             // splitContainer4
@@ -355,8 +186,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer7);
-            this.splitContainer4.Size = new System.Drawing.Size(412, 165);
-            this.splitContainer4.SplitterDistance = 84;
+            this.splitContainer4.Size = new System.Drawing.Size(429, 167);
+            this.splitContainer4.SplitterDistance = 85;
             this.splitContainer4.TabIndex = 0;
             // 
             // splitContainer6
@@ -376,8 +207,8 @@
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer15);
             this.splitContainer6.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer6.Size = new System.Drawing.Size(412, 84);
-            this.splitContainer6.SplitterDistance = 196;
+            this.splitContainer6.Size = new System.Drawing.Size(429, 85);
+            this.splitContainer6.SplitterDistance = 204;
             this.splitContainer6.SplitterWidth = 20;
             this.splitContainer6.TabIndex = 0;
             this.splitContainer6.TabStop = false;
@@ -399,10 +230,31 @@
             // 
             this.splitContainer14.Panel2.Controls.Add(this.tbxCode);
             this.splitContainer14.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer14.Size = new System.Drawing.Size(196, 84);
+            this.splitContainer14.Size = new System.Drawing.Size(204, 85);
             this.splitContainer14.SplitterDistance = 25;
             this.splitContainer14.TabIndex = 0;
             this.splitContainer14.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AccessibleName = "lblCode";
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Código";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbxCode
+            // 
+            this.tbxCode.AccessibleName = "tbxCode";
+            this.tbxCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbxCode.Enabled = false;
+            this.tbxCode.Location = new System.Drawing.Point(0, 0);
+            this.tbxCode.Name = "tbxCode";
+            this.tbxCode.Size = new System.Drawing.Size(204, 20);
+            this.tbxCode.TabIndex = 0;
             // 
             // splitContainer15
             // 
@@ -421,10 +273,31 @@
             // 
             this.splitContainer15.Panel2.Controls.Add(this.tbxName);
             this.splitContainer15.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer15.Size = new System.Drawing.Size(196, 84);
+            this.splitContainer15.Size = new System.Drawing.Size(205, 85);
             this.splitContainer15.SplitterDistance = 25;
             this.splitContainer15.TabIndex = 0;
             this.splitContainer15.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AccessibleName = "lblName";
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(205, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Nombre";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbxName
+            // 
+            this.tbxName.AccessibleName = "tbxName";
+            this.tbxName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbxName.Enabled = false;
+            this.tbxName.Location = new System.Drawing.Point(0, 0);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(205, 20);
+            this.tbxName.TabIndex = 0;
             // 
             // splitContainer7
             // 
@@ -443,8 +316,8 @@
             this.splitContainer7.Panel2.Controls.Add(this.splitContainer13);
             this.splitContainer7.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer7.Size = new System.Drawing.Size(412, 77);
-            this.splitContainer7.SplitterDistance = 196;
+            this.splitContainer7.Size = new System.Drawing.Size(429, 78);
+            this.splitContainer7.SplitterDistance = 204;
             this.splitContainer7.SplitterWidth = 20;
             this.splitContainer7.TabIndex = 0;
             this.splitContainer7.TabStop = false;
@@ -466,10 +339,31 @@
             // 
             this.splitContainer12.Panel2.Controls.Add(this.tbxDesc);
             this.splitContainer12.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer12.Size = new System.Drawing.Size(196, 77);
+            this.splitContainer12.Size = new System.Drawing.Size(204, 78);
             this.splitContainer12.SplitterDistance = 25;
             this.splitContainer12.TabIndex = 0;
             this.splitContainer12.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AccessibleName = "lblDesc";
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 25);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Descripción";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbxDesc
+            // 
+            this.tbxDesc.AccessibleName = "txbDesc";
+            this.tbxDesc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbxDesc.Enabled = false;
+            this.tbxDesc.Location = new System.Drawing.Point(0, 0);
+            this.tbxDesc.Name = "tbxDesc";
+            this.tbxDesc.Size = new System.Drawing.Size(204, 20);
+            this.tbxDesc.TabIndex = 0;
             // 
             // splitContainer13
             // 
@@ -488,10 +382,31 @@
             // 
             this.splitContainer13.Panel2.Controls.Add(this.tbxPrice);
             this.splitContainer13.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer13.Size = new System.Drawing.Size(196, 77);
+            this.splitContainer13.Size = new System.Drawing.Size(205, 78);
             this.splitContainer13.SplitterDistance = 25;
             this.splitContainer13.TabIndex = 0;
             this.splitContainer13.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AccessibleName = "lblPrice";
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Precio";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbxPrice
+            // 
+            this.tbxPrice.AccessibleName = "tbxPrice";
+            this.tbxPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbxPrice.Enabled = false;
+            this.tbxPrice.Location = new System.Drawing.Point(0, 0);
+            this.tbxPrice.Name = "tbxPrice";
+            this.tbxPrice.Size = new System.Drawing.Size(205, 20);
+            this.tbxPrice.TabIndex = 0;
             // 
             // splitContainer5
             // 
@@ -508,8 +423,8 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.splitContainer9);
-            this.splitContainer5.Size = new System.Drawing.Size(412, 231);
-            this.splitContainer5.SplitterDistance = 80;
+            this.splitContainer5.Size = new System.Drawing.Size(429, 234);
+            this.splitContainer5.SplitterDistance = 81;
             this.splitContainer5.TabIndex = 0;
             this.splitContainer5.TabStop = false;
             // 
@@ -530,8 +445,8 @@
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer11);
             this.splitContainer8.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer8.Size = new System.Drawing.Size(412, 80);
-            this.splitContainer8.SplitterDistance = 196;
+            this.splitContainer8.Size = new System.Drawing.Size(429, 81);
+            this.splitContainer8.SplitterDistance = 204;
             this.splitContainer8.SplitterWidth = 20;
             this.splitContainer8.TabIndex = 0;
             this.splitContainer8.TabStop = false;
@@ -553,10 +468,33 @@
             // 
             this.splitContainer10.Panel2.Controls.Add(this.cboxBrand);
             this.splitContainer10.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer10.Size = new System.Drawing.Size(196, 80);
+            this.splitContainer10.Size = new System.Drawing.Size(204, 81);
             this.splitContainer10.SplitterDistance = 25;
             this.splitContainer10.TabIndex = 0;
             this.splitContainer10.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AccessibleName = "lblBrand";
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(204, 25);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Marca";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboxBrand
+            // 
+            this.cboxBrand.AccessibleName = "cboxBrand";
+            this.cboxBrand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxBrand.Enabled = false;
+            this.cboxBrand.FormattingEnabled = true;
+            this.cboxBrand.Location = new System.Drawing.Point(0, 0);
+            this.cboxBrand.Name = "cboxBrand";
+            this.cboxBrand.Size = new System.Drawing.Size(204, 21);
+            this.cboxBrand.TabIndex = 0;
             // 
             // splitContainer11
             // 
@@ -575,10 +513,33 @@
             // 
             this.splitContainer11.Panel2.Controls.Add(this.cboxCat);
             this.splitContainer11.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer11.Size = new System.Drawing.Size(196, 80);
+            this.splitContainer11.Size = new System.Drawing.Size(205, 81);
             this.splitContainer11.SplitterDistance = 25;
             this.splitContainer11.TabIndex = 0;
             this.splitContainer11.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AccessibleName = "lblCategory";
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(205, 25);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Categoría";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboxCat
+            // 
+            this.cboxCat.AccessibleName = "cboxCat";
+            this.cboxCat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCat.Enabled = false;
+            this.cboxCat.FormattingEnabled = true;
+            this.cboxCat.Location = new System.Drawing.Point(0, 0);
+            this.cboxCat.Name = "cboxCat";
+            this.cboxCat.Size = new System.Drawing.Size(205, 21);
+            this.cboxCat.TabIndex = 0;
             // 
             // splitContainer9
             // 
@@ -597,8 +558,8 @@
             this.splitContainer9.Panel2.Controls.Add(this.pctrBox);
             this.splitContainer9.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer9.Size = new System.Drawing.Size(412, 147);
-            this.splitContainer9.SplitterDistance = 196;
+            this.splitContainer9.Size = new System.Drawing.Size(429, 149);
+            this.splitContainer9.SplitterDistance = 204;
             this.splitContainer9.SplitterWidth = 20;
             this.splitContainer9.TabIndex = 0;
             this.splitContainer9.TabStop = false;
@@ -618,7 +579,7 @@
             // 
             this.splitContainer16.Panel2.Controls.Add(this.panel1);
             this.splitContainer16.Panel2.Controls.Add(this.tbxImg);
-            this.splitContainer16.Size = new System.Drawing.Size(196, 147);
+            this.splitContainer16.Size = new System.Drawing.Size(204, 149);
             this.splitContainer16.SplitterDistance = 40;
             this.splitContainer16.TabIndex = 0;
             this.splitContainer16.TabStop = false;
@@ -630,7 +591,7 @@
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(196, 40);
+            this.label7.Size = new System.Drawing.Size(204, 40);
             this.label7.TabIndex = 13;
             this.label7.Text = "URL de Imagen";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -645,13 +606,13 @@
             this.panel1.MaximumSize = new System.Drawing.Size(0, 46);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(196, 46);
+            this.panel1.Size = new System.Drawing.Size(204, 46);
             this.panel1.TabIndex = 9;
             // 
             // btnNextImg
             // 
             this.btnNextImg.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNextImg.Location = new System.Drawing.Point(173, 10);
+            this.btnNextImg.Location = new System.Drawing.Point(181, 10);
             this.btnNextImg.Name = "btnNextImg";
             this.btnNextImg.Size = new System.Drawing.Size(23, 36);
             this.btnNextImg.TabIndex = 2;
@@ -661,11 +622,13 @@
             // 
             // btnAddImg
             // 
+            this.btnAddImg.AccessibleName = "btnAddImg";
             this.btnAddImg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddImg.Enabled = false;
             this.btnAddImg.Location = new System.Drawing.Point(24, 10);
             this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.Size = new System.Drawing.Size(152, 36);
+            this.btnAddImg.Size = new System.Drawing.Size(363, 36);
             this.btnAddImg.TabIndex = 1;
             this.btnAddImg.Text = "Agregar";
             this.btnAddImg.UseVisualStyleBackColor = true;
@@ -680,17 +643,29 @@
             this.btnPrevImg.TabIndex = 0;
             this.btnPrevImg.Text = "<";
             this.btnPrevImg.UseVisualStyleBackColor = true;
-            this.btnPrevImg.Click += new System.EventHandler(this.btnPrevImg_Click);
             // 
             // tbxImg
             // 
             this.tbxImg.AccessibleName = "txbImg";
             this.tbxImg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbxImg.Enabled = false;
             this.tbxImg.Location = new System.Drawing.Point(0, 0);
             this.tbxImg.Name = "tbxImg";
-            this.tbxImg.Size = new System.Drawing.Size(196, 20);
+            this.tbxImg.Size = new System.Drawing.Size(204, 20);
             this.tbxImg.TabIndex = 0;
-            this.tbxImg.TextChanged += new System.EventHandler(this.tbxImg_TextChanged);
+            this.tbxImg.TextChanged += new System.EventHandler(this.tbxImg_TextChanged_1);
+            // 
+            // pctrBox
+            // 
+            this.pctrBox.AccessibleName = "pctrBox";
+            this.pctrBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctrBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctrBox.Location = new System.Drawing.Point(0, 0);
+            this.pctrBox.Name = "pctrBox";
+            this.pctrBox.Size = new System.Drawing.Size(205, 149);
+            this.pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctrBox.TabIndex = 15;
+            this.pctrBox.TabStop = false;
             // 
             // splitContainer2
             // 
@@ -701,35 +676,62 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.Agregar);
+            this.splitContainer2.Panel1.Controls.Add(this.btnAdd);
             this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.Cancelar);
+            this.splitContainer2.Panel2.Controls.Add(this.btnBack);
             this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.splitContainer2.Size = new System.Drawing.Size(412, 83);
-            this.splitContainer2.SplitterDistance = 196;
+            this.splitContainer2.Size = new System.Drawing.Size(429, 85);
+            this.splitContainer2.SplitterDistance = 204;
             this.splitContainer2.SplitterWidth = 20;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
-            // AddArticle
+            // btnAdd
             // 
-            this.AccessibleName = "AddArt";
+            this.btnAdd.AccessibleName = "btnAdd";
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdd.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAdd.Location = new System.Drawing.Point(34, 21);
+            this.btnAdd.MaximumSize = new System.Drawing.Size(136, 43);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(136, 43);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Editar";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.Editar_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.AccessibleName = "btnBack";
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBack.BackColor = System.Drawing.Color.LightCoral;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBack.Location = new System.Drawing.Point(28, 21);
+            this.btnBack.MaximumSize = new System.Drawing.Size(136, 43);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(136, 43);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Volver";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // ArticleDetails
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(452, 527);
+            this.ClientSize = new System.Drawing.Size(469, 534);
             this.Controls.Add(this.splitContainer1);
-            this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(468, 566);
-            this.Name = "AddArticle";
+            this.Name = "ArticleDetails";
             this.Padding = new System.Windows.Forms.Padding(20);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar nuevo Artículo";
-            this.Load += new System.EventHandler(this.AddArticle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).EndInit();
+            this.Text = "ArticleDetails";
+            this.Load += new System.EventHandler(this.ArticleDetails_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -796,6 +798,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
             this.splitContainer16.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -806,42 +809,42 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Agregar;
-        private System.Windows.Forms.Button Cancelar;
-        private System.Windows.Forms.TextBox tbxCode;
-        private System.Windows.Forms.TextBox tbxName;
-        private System.Windows.Forms.TextBox tbxDesc;
-        private System.Windows.Forms.TextBox tbxPrice;
-        private System.Windows.Forms.ComboBox cboxBrand;
-        private System.Windows.Forms.ComboBox cboxCat;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pctrBox;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.SplitContainer splitContainer14;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxCode;
         private System.Windows.Forms.SplitContainer splitContainer15;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.SplitContainer splitContainer12;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbxDesc;
         private System.Windows.Forms.SplitContainer splitContainer13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbxPrice;
+        private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.SplitContainer splitContainer10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboxBrand;
         private System.Windows.Forms.SplitContainer splitContainer11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboxCat;
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.SplitContainer splitContainer16;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbxImg;
-        private System.Windows.Forms.Button btnPrevImg;
-        private System.Windows.Forms.Button btnAddImg;
-        private System.Windows.Forms.Button btnNextImg;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnNextImg;
+        private System.Windows.Forms.Button btnAddImg;
+        private System.Windows.Forms.Button btnPrevImg;
+        private System.Windows.Forms.TextBox tbxImg;
+        private System.Windows.Forms.PictureBox pctrBox;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnBack;
     }
 }

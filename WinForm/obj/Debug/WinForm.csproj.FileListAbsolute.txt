@@ -52,3 +52,4 @@ C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\bin\Debug\DBAccess.pdb
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\bin\Debug\ModelDomain.pdb
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.Up2Date
+C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\WinForm\obj\Debug\WinForm.ArticleDetails.resources

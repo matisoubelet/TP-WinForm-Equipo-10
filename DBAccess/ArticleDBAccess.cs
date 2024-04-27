@@ -238,5 +238,38 @@ namespace DBAccess
                 }
             }
         }
+
+        public void ModifyArticle(Article article, List<Img> images)
+        {
+            try
+            {
+                SetQuery("update ARTICULOS set Codigo ='"+ article.code +"', Nombre = '"+article.name+"', Descripcion = '"+article.desc+"', IdMarca = "+article.idBrand+", IdCategoria = "+article.idCategory+", Precio = "+article.price+" Where Id ="+article.id+"");
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            foreach (Img img in images)
+            {
+                try
+                {
+                    SetQuery("Insert into IMAGENES values(" + img.articleID + ", '" + img.imageUrl + "')");
+                    ExecuteAction();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+            }
+        }
     }
 }

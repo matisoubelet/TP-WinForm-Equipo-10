@@ -17,15 +17,18 @@ namespace WinForm
         public Panel panel;
         public string name;
         public float price;
-        public string url; 
+        public string url;
+        EventHandler clickEvent;
 
-        public ArticlePreview(Article article, Img image, ref Panel panel)
+        public ArticlePreview(Article article, Img image, ref Panel panel, EventHandler click)
         {
             artID = article.id;
             this.panel = panel;
             name = article.name;
             price = article.price;
             url = image.imageUrl;
+            clickEvent = click;
+
             
 
             ConfigPreview();
@@ -33,7 +36,7 @@ namespace WinForm
 
         public ArticlePreview()
         {
-
+              
         }
 
         private void ConfigPreview()
@@ -89,6 +92,11 @@ namespace WinForm
             artName.BringToFront();
             artPrice.BringToFront();
             previewPic.SendToBack();
+
+            panel.Click += clickEvent;
+            previewPic.Click += clickEvent;
+            artName.Click += clickEvent;
+            artPrice.Click += clickEvent;
 
             panel.ResumeLayout(true);
         }

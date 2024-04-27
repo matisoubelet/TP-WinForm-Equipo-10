@@ -64,6 +64,7 @@ namespace WinForm
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
@@ -127,6 +128,7 @@ namespace WinForm
             {
                 tbxImg.Text = newImages[currentImg].imageUrl;
             }
+        
         }
     }
 }

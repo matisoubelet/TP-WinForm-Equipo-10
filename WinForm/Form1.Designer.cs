@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtBoxBuscarArticulo = new System.Windows.Forms.TextBox();
+            this.TxtBoxSearchForArticle = new System.Windows.Forms.TextBox();
             this.LblArticulo = new System.Windows.Forms.Label();
             this.pnlLista = new System.Windows.Forms.Panel();
             this.flpLista = new System.Windows.Forms.FlowLayoutPanel();
@@ -71,14 +71,15 @@
             this.splitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TxtBoxBuscarArticulo
+            // TxtBoxSearchForArticle
             // 
-            this.TxtBoxBuscarArticulo.AccessibleName = "TxtBoxBuscarArticulo";
-            this.TxtBoxBuscarArticulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtBoxBuscarArticulo.Location = new System.Drawing.Point(3, 22);
-            this.TxtBoxBuscarArticulo.Name = "TxtBoxBuscarArticulo";
-            this.TxtBoxBuscarArticulo.Size = new System.Drawing.Size(179, 20);
-            this.TxtBoxBuscarArticulo.TabIndex = 0;
+            this.TxtBoxSearchForArticle.AccessibleName = "TxtBoxSearchForArticle";
+            this.TxtBoxSearchForArticle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtBoxSearchForArticle.Location = new System.Drawing.Point(3, 22);
+            this.TxtBoxSearchForArticle.Name = "TxtBoxSearchForArticle";
+            this.TxtBoxSearchForArticle.Size = new System.Drawing.Size(179, 20);
+            this.TxtBoxSearchForArticle.TabIndex = 0;
+            this.TxtBoxSearchForArticle.TextChanged += new System.EventHandler(this.TxtBoxSearchForArticle_TextChanged);
             // 
             // LblArticulo
             // 
@@ -196,7 +197,7 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.TxtBoxBuscarArticulo);
+            this.splitContainer2.Panel2.Controls.Add(this.TxtBoxSearchForArticle);
             this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(3, 22, 3, 3);
             this.splitContainer2.Size = new System.Drawing.Size(260, 62);
             this.splitContainer2.SplitterDistance = 71;
@@ -341,7 +342,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtBoxBuscarArticulo;
+        private System.Windows.Forms.TextBox TxtBoxSearchForArticle;
         private System.Windows.Forms.Label LblArticulo;
         private System.Windows.Forms.Panel pnlLista;
         private System.Windows.Forms.FlowLayoutPanel flpLista;
