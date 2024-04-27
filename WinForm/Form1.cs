@@ -24,8 +24,8 @@ namespace WinForm
         {
             //inicializa los filter dropdowns
 
-            CmbCategory.Items.Add("Ninguna"); //esta opcion desactiva el filtro
-            CmbBrand.Items.Add("Ninguna"); //esta opcion desactiva el filtro
+            CmbCategory.Items.Add("Todos"); //esta opcion desactiva el filtro
+            CmbBrand.Items.Add("Todos"); //esta opcion desactiva el filtro
 
             foreach (Category category in dbAccess.ListCategories())
             {
@@ -39,7 +39,7 @@ namespace WinForm
             CmbCategory.SelectedIndex = 0; //selecciona la primera opcion por defecto
             CmbBrand.SelectedIndex = 0; //selecciona la primera opcion por defecto
 
-            LoadDBArticles();
+        
         }
 
         private void LoadDBArticles()
@@ -131,49 +131,95 @@ namespace WinForm
         private void CmbBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            /*Article article = new Article();
-
-            //string brandName = article.brand.getName();
-
-            int index = CmbBrand.SelectedIndex;
-
-
-            if (CmbBrand.Items[index].ToString() == brandName)
+            if (CmbBrand.Text == "Todos")
             {
-                //Logica para mostrar el cuadro del producto
-            }*/
+                flpLista.Controls.Clear();
+                LoadDBArticles();
+            }
+            else
+            {
+                List<Article> list = dbAccess.ListArticles();
+                List<Img> image = dbAccess.ListImages();
+                Img placeholder = new Img();
 
-            //este codigo deberia cambiar un bool brandFilter = true si ->
-            //(cmbbrand.items[cmbbrand.selectedindex].tostring() == "Ninguna")
-            //y llamamos a actualizar la lista (func)
-            //si no, brandFilter = false y llamamos a actualizar la lista (func)
+                flpLista.Controls.Clear();
+                flpLista.SuspendLayout();
 
-            //actualizar la lista remueve (?) todos los items y los agrega de la base de datos segun ->
-            //brandFilter = false -> agrega todos los articulos
-            //brandFilter = true -> agrega solo los articulos que comparten brand con selectedindex
+                foreach (Brand brand in dbAccess.ListBrands()) // recorre la lista db de marcas 
+                {
+                    if (brand.name == CmbBrand.Text) //compara los nombres de marcas con el indice de combobox
+                    {
+                        foreach (Article article in list) //itera la lista de articulos de la DB
+                        {
+                            if (brand.id == article.id) //Compara los id de articulo y marca
+                            {
+                                foreach (Img img in image) //itera la lista de Imagenes de la DB
+                                {
+                                    if (article.id == img.articleID) //Pregunta si hay coincidencia en el id del articulo y el id de la imagen
+                                    {
+                                        placeholder = img; //guarda la imagen de esa coincidencia en el articulo
+                                    }
+                                }
+                                Panel previewPanel = new Panel();
+                                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel);
+                                artPreviews.Add(artPreview);
+                                flpLista.Controls.Add(previewPanel);
+                            }
+                        }
+
+                    }
+
+                }
+                flpLista.ResumeLayout(true);
+                UpdateFlpListaArticle();
+            }
         }
 
         private void CmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*Article article = new Article();
-            //string categoryName = article.category.getName();
 
-            int index = CmbCategory.SelectedIndex;
-
-
-            if (CmbCategory.Items[index].ToString() == categoryName)
+            if (CmbCategory.Text == "Todos")
             {
-                //Logica para mostrar el cuadro del producto
-            }*/
+                flpLista.Controls.Clear();
+                LoadDBArticles();
+            }
+            else
+            {
+                List<Article> list = dbAccess.ListArticles();
+                List<Img> image = dbAccess.ListImages();
+                Img placeholder = new Img();
 
-            //este codigo deberia cambiar un bool categoryFilter = true si ->
-            //(cmbcategory.items[cmbcategory.selectedindex].tostring() == "Ninguna")
-            //y llamamos a actualizar la lista (func)
-            //si no, categoryFilter = false y llamamos a actualizar la lista (func)
+                flpLista.Controls.Clear();
+                flpLista.SuspendLayout();
 
-            //actualizar la lista remueve (?) todos los items y los agrega de la base de datos segun ->
-            //categoryFilter = false -> agrega todos los articulos
-            //categoryFilter = true -> agrega solo los articulos que comparten category con selectedindex
+                foreach (Category category in dbAccess.ListCategories()) // recorre la lista db de categorias
+                {
+                    if (category.name == CmbCategory.Text) //compara los nombres de las categorias con el indice de combobox
+                    {
+                        foreach (Article article in list) //itera la lista de articulos de la DB
+                        {
+                            if (category.id == article.id) //Compara los id de articulo y categoria
+                            {
+                                foreach (Img img in image) //itera la lista de Imagenes de la DB
+                                {
+                                    if (article.id == img.articleID) //Pregunta si hay coincidencia en el id del articulo y el id de la imagen
+                                    {
+                                        placeholder = img; //guarda la imagen de esa coincidencia en el articulo
+                                    }
+                                }
+                                Panel previewPanel = new Panel();
+                                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel);
+                                artPreviews.Add(artPreview);
+                                flpLista.Controls.Add(previewPanel);
+                            }
+                        }
+
+                    }
+
+                }
+                flpLista.ResumeLayout(true);
+                UpdateFlpListaArticle();
+            }
         }
     }
 }

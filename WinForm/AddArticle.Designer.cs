@@ -57,10 +57,10 @@
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer16 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.tbxImg = new System.Windows.Forms.TextBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -118,14 +118,14 @@
             this.splitContainer9.Panel1.SuspendLayout();
             this.splitContainer9.Panel2.SuspendLayout();
             this.splitContainer9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
             this.splitContainer16.Panel1.SuspendLayout();
             this.splitContainer16.Panel2.SuspendLayout();
             this.splitContainer16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Agregar
@@ -152,7 +152,7 @@
             this.Cancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelar.BackColor = System.Drawing.Color.LightCoral;
             this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cancelar.Location = new System.Drawing.Point(22, 20);
+            this.Cancelar.Location = new System.Drawing.Point(14, 20);
             this.Cancelar.MaximumSize = new System.Drawing.Size(136, 43);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(136, 43);
@@ -585,27 +585,6 @@
             this.splitContainer9.SplitterWidth = 20;
             this.splitContainer9.TabIndex = 0;
             // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.IsSplitterFixed = true;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.Agregar);
-            this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.Cancelar);
-            this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.splitContainer2.Size = new System.Drawing.Size(412, 83);
-            this.splitContainer2.SplitterDistance = 196;
-            this.splitContainer2.SplitterWidth = 20;
-            this.splitContainer2.TabIndex = 0;
-            // 
             // splitContainer16
             // 
             this.splitContainer16.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -645,6 +624,27 @@
             this.tbxImg.Name = "tbxImg";
             this.tbxImg.Size = new System.Drawing.Size(196, 20);
             this.tbxImg.TabIndex = 5;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.IsSplitterFixed = true;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.Agregar);
+            this.splitContainer2.Panel1.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.Cancelar);
+            this.splitContainer2.Panel2.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
+            this.splitContainer2.Size = new System.Drawing.Size(412, 83);
+            this.splitContainer2.SplitterDistance = 196;
+            this.splitContainer2.SplitterWidth = 20;
+            this.splitContainer2.TabIndex = 0;
             // 
             // AddArticle
             // 
@@ -722,15 +722,15 @@
             this.splitContainer9.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             this.splitContainer16.Panel1.ResumeLayout(false);
             this.splitContainer16.Panel2.ResumeLayout(false);
             this.splitContainer16.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
             this.splitContainer16.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
