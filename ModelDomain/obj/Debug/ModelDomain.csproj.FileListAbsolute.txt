@@ -10,9 +10,3 @@ C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.csproj.CoreCompileInputs.cache
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.dll
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Repo\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.pdb
-C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Clon\WinForm-C-\ModelDomain\bin\Debug\ModelDomain.dll
-C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Clon\WinForm-C-\ModelDomain\bin\Debug\ModelDomain.pdb
-C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Clon\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.csproj.AssemblyReference.cache
-C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Clon\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Clon\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.dll
-C:\Users\Usuario\Desktop\UTN 5to CUATRIMESTRE\Programación III\Actividad 2\Clon\WinForm-C-\ModelDomain\obj\Debug\ModelDomain.pdb

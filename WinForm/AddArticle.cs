@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ModelDomain;
 using DBAccess;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Diagnostics;
 
 namespace WinForm
 {
@@ -22,7 +24,8 @@ namespace WinForm
 
         ArticleDBAccess dbAccess = new ArticleDBAccess();
         public Article newArticle = new Article();
-        public Img newImage = new Img();
+        public List<Img> newImages = new List<Img>();
+        int currentImg = 0;
 
         public void Agregar_Click(object sender, EventArgs e)
         { 
@@ -35,7 +38,10 @@ namespace WinForm
             newArticle.price = float.Parse(tbxPrice.Text);
             newArticle.idBrand = ((Brand)cboxBrand.SelectedItem).GetID();
             newArticle.idCategory = ((Category)cboxCat.SelectedItem).GetID();
-            newImage.articleID = dbAccess.GetLastArticleId() + 1;
+            foreach (Img img in newImages)
+            {
+                img.articleID = dbAccess.GetLastArticleId() + 1;
+            }
             this.Close();
         }
 
@@ -61,29 +67,65 @@ namespace WinForm
             this.Close();
         }
 
-        private void btnImg_Click(object sender, EventArgs e)
+        private void tbxImg_TextChanged(object sender, EventArgs e)
         {
-            //Guarda una imagen (de momento una sola, pero tienen que ser varias, o se podrian
-            //añadir al editar el articulo)
-
-            //AUN NO GUARDA LA IMAGEN EN NINGUN LADO!!!!!
-
             try
-            {   //Pide que se ingrese la ubicacion de la imagen que se esta buscando, y especifica el tipo de archivo que acepta
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files|*.png| All files(*.*)|*.*";
-
-                if(dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    //Si todo esta bien, toma la img y la guarda en el PictureBox
-                    newImage.imageUrl = dialog.FileName;
-                    pctrBox.ImageLocation = newImage.imageUrl;
-                }
+            {
+                pctrBox.Load(tbxImg.Text);
             }
-            catch (Exception) 
-            { 
-                //En caso de error, enseña estos textos en lugar de romper
-                MessageBox.Show("Ocurrio un error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch
+            {
+                pctrBox.Load("https://static-00.iconduck.com/assets.00/no-image-icon-512x512-lfoanl0w.png");
+            }
+        }
+
+        private void btnAddImg_Click(object sender, EventArgs e)
+        {
+            Img newImg = new Img();
+            bool validURL;
+            Uri uriResult;
+            validURL = Uri.TryCreate(tbxImg.Text, UriKind.Absolute, out uriResult) && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+
+            if (validURL)
+            {
+                newImg.imageUrl = tbxImg.Text;
+                newImages.Add(newImg);
+                currentImg = newImages.Count - 1;
+            }
+            tbxImg.Text = "";
+        }
+
+        private void btnPrevImg_Click(object sender, EventArgs e)
+        {
+            if (currentImg > 0 && newImages.Count != 0)
+            {
+                currentImg--;
+            }
+            else
+            {
+                currentImg = newImages.Count - 1;
+            }
+
+            if (newImages.Count != 0)
+            {
+                tbxImg.Text = newImages[currentImg].imageUrl;
+            }
+        }
+
+        private void btnNextImg_Click(object sender, EventArgs e)
+        {
+            if (currentImg < newImages.Count - 1)
+            {
+                currentImg++;
+            }
+            else
+            {
+                currentImg = 0;
+            }
+
+            if (newImages.Count != 0)
+            {
+                tbxImg.Text = newImages[currentImg].imageUrl;
             }
         }
     }

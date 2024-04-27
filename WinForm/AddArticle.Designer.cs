@@ -59,6 +59,10 @@
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.splitContainer16 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNextImg = new System.Windows.Forms.Button();
+            this.btnAddImg = new System.Windows.Forms.Button();
+            this.btnPrevImg = new System.Windows.Forms.Button();
             this.tbxImg = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pctrBox)).BeginInit();
@@ -122,6 +126,7 @@
             this.splitContainer16.Panel1.SuspendLayout();
             this.splitContainer16.Panel2.SuspendLayout();
             this.splitContainer16.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -141,7 +146,7 @@
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(136, 43);
             this.Agregar.TabIndex = 0;
-            this.Agregar.Text = "Agregar";
+            this.Agregar.Text = "Confirmar";
             this.Agregar.UseVisualStyleBackColor = false;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
@@ -156,7 +161,7 @@
             this.Cancelar.MaximumSize = new System.Drawing.Size(136, 43);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(136, 43);
-            this.Cancelar.TabIndex = 1;
+            this.Cancelar.TabIndex = 0;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = false;
             this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
@@ -168,7 +173,7 @@
             this.tbxCode.Location = new System.Drawing.Point(0, 0);
             this.tbxCode.Name = "tbxCode";
             this.tbxCode.Size = new System.Drawing.Size(196, 20);
-            this.tbxCode.TabIndex = 2;
+            this.tbxCode.TabIndex = 0;
             // 
             // tbxName
             // 
@@ -177,7 +182,7 @@
             this.tbxName.Location = new System.Drawing.Point(0, 0);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(196, 20);
-            this.tbxName.TabIndex = 3;
+            this.tbxName.TabIndex = 0;
             // 
             // tbxDesc
             // 
@@ -186,7 +191,7 @@
             this.tbxDesc.Location = new System.Drawing.Point(0, 0);
             this.tbxDesc.Name = "tbxDesc";
             this.tbxDesc.Size = new System.Drawing.Size(196, 20);
-            this.tbxDesc.TabIndex = 4;
+            this.tbxDesc.TabIndex = 0;
             // 
             // tbxPrice
             // 
@@ -195,27 +200,29 @@
             this.tbxPrice.Location = new System.Drawing.Point(0, 0);
             this.tbxPrice.Name = "tbxPrice";
             this.tbxPrice.Size = new System.Drawing.Size(196, 20);
-            this.tbxPrice.TabIndex = 5;
+            this.tbxPrice.TabIndex = 0;
             // 
             // cboxBrand
             // 
             this.cboxBrand.AccessibleName = "cboxBrand";
             this.cboxBrand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxBrand.FormattingEnabled = true;
             this.cboxBrand.Location = new System.Drawing.Point(0, 0);
             this.cboxBrand.Name = "cboxBrand";
             this.cboxBrand.Size = new System.Drawing.Size(196, 21);
-            this.cboxBrand.TabIndex = 6;
+            this.cboxBrand.TabIndex = 0;
             // 
             // cboxCat
             // 
             this.cboxCat.AccessibleName = "cboxCat";
             this.cboxCat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCat.FormattingEnabled = true;
             this.cboxCat.Location = new System.Drawing.Point(0, 0);
             this.cboxCat.Name = "cboxCat";
             this.cboxCat.Size = new System.Drawing.Size(196, 21);
-            this.cboxCat.TabIndex = 7;
+            this.cboxCat.TabIndex = 0;
             // 
             // label1
             // 
@@ -287,11 +294,11 @@
             // 
             this.pctrBox.AccessibleName = "pctrBox";
             this.pctrBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pctrBox.Location = new System.Drawing.Point(30, 5);
-            this.pctrBox.MaximumSize = new System.Drawing.Size(136, 136);
+            this.pctrBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctrBox.Location = new System.Drawing.Point(0, 0);
             this.pctrBox.Name = "pctrBox";
-            this.pctrBox.Size = new System.Drawing.Size(136, 136);
-            this.pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctrBox.Size = new System.Drawing.Size(196, 147);
+            this.pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctrBox.TabIndex = 15;
             this.pctrBox.TabStop = false;
             // 
@@ -373,6 +380,7 @@
             this.splitContainer6.SplitterDistance = 196;
             this.splitContainer6.SplitterWidth = 20;
             this.splitContainer6.TabIndex = 0;
+            this.splitContainer6.TabStop = false;
             // 
             // splitContainer14
             // 
@@ -394,6 +402,7 @@
             this.splitContainer14.Size = new System.Drawing.Size(196, 84);
             this.splitContainer14.SplitterDistance = 25;
             this.splitContainer14.TabIndex = 0;
+            this.splitContainer14.TabStop = false;
             // 
             // splitContainer15
             // 
@@ -415,6 +424,7 @@
             this.splitContainer15.Size = new System.Drawing.Size(196, 84);
             this.splitContainer15.SplitterDistance = 25;
             this.splitContainer15.TabIndex = 0;
+            this.splitContainer15.TabStop = false;
             // 
             // splitContainer7
             // 
@@ -437,6 +447,7 @@
             this.splitContainer7.SplitterDistance = 196;
             this.splitContainer7.SplitterWidth = 20;
             this.splitContainer7.TabIndex = 0;
+            this.splitContainer7.TabStop = false;
             // 
             // splitContainer12
             // 
@@ -458,6 +469,7 @@
             this.splitContainer12.Size = new System.Drawing.Size(196, 77);
             this.splitContainer12.SplitterDistance = 25;
             this.splitContainer12.TabIndex = 0;
+            this.splitContainer12.TabStop = false;
             // 
             // splitContainer13
             // 
@@ -479,6 +491,7 @@
             this.splitContainer13.Size = new System.Drawing.Size(196, 77);
             this.splitContainer13.SplitterDistance = 25;
             this.splitContainer13.TabIndex = 0;
+            this.splitContainer13.TabStop = false;
             // 
             // splitContainer5
             // 
@@ -498,6 +511,7 @@
             this.splitContainer5.Size = new System.Drawing.Size(412, 231);
             this.splitContainer5.SplitterDistance = 80;
             this.splitContainer5.TabIndex = 0;
+            this.splitContainer5.TabStop = false;
             // 
             // splitContainer8
             // 
@@ -520,6 +534,7 @@
             this.splitContainer8.SplitterDistance = 196;
             this.splitContainer8.SplitterWidth = 20;
             this.splitContainer8.TabIndex = 0;
+            this.splitContainer8.TabStop = false;
             // 
             // splitContainer10
             // 
@@ -541,6 +556,7 @@
             this.splitContainer10.Size = new System.Drawing.Size(196, 80);
             this.splitContainer10.SplitterDistance = 25;
             this.splitContainer10.TabIndex = 0;
+            this.splitContainer10.TabStop = false;
             // 
             // splitContainer11
             // 
@@ -562,6 +578,7 @@
             this.splitContainer11.Size = new System.Drawing.Size(196, 80);
             this.splitContainer11.SplitterDistance = 25;
             this.splitContainer11.TabIndex = 0;
+            this.splitContainer11.TabStop = false;
             // 
             // splitContainer9
             // 
@@ -584,6 +601,7 @@
             this.splitContainer9.SplitterDistance = 196;
             this.splitContainer9.SplitterWidth = 20;
             this.splitContainer9.TabIndex = 0;
+            this.splitContainer9.TabStop = false;
             // 
             // splitContainer16
             // 
@@ -598,10 +616,12 @@
             // 
             // splitContainer16.Panel2
             // 
+            this.splitContainer16.Panel2.Controls.Add(this.panel1);
             this.splitContainer16.Panel2.Controls.Add(this.tbxImg);
             this.splitContainer16.Size = new System.Drawing.Size(196, 147);
-            this.splitContainer16.SplitterDistance = 65;
+            this.splitContainer16.SplitterDistance = 40;
             this.splitContainer16.TabIndex = 0;
+            this.splitContainer16.TabStop = false;
             // 
             // label7
             // 
@@ -610,20 +630,67 @@
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.label7.Size = new System.Drawing.Size(196, 65);
+            this.label7.Size = new System.Drawing.Size(196, 40);
             this.label7.TabIndex = 13;
             this.label7.Text = "URL de Imagen";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnNextImg);
+            this.panel1.Controls.Add(this.btnAddImg);
+            this.panel1.Controls.Add(this.btnPrevImg);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 20);
+            this.panel1.MaximumSize = new System.Drawing.Size(0, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.panel1.Size = new System.Drawing.Size(196, 46);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnNextImg
+            // 
+            this.btnNextImg.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNextImg.Location = new System.Drawing.Point(173, 10);
+            this.btnNextImg.Name = "btnNextImg";
+            this.btnNextImg.Size = new System.Drawing.Size(23, 36);
+            this.btnNextImg.TabIndex = 2;
+            this.btnNextImg.Text = ">";
+            this.btnNextImg.UseVisualStyleBackColor = true;
+            this.btnNextImg.Click += new System.EventHandler(this.btnNextImg_Click);
+            // 
+            // btnAddImg
+            // 
+            this.btnAddImg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddImg.Location = new System.Drawing.Point(24, 10);
+            this.btnAddImg.Name = "btnAddImg";
+            this.btnAddImg.Size = new System.Drawing.Size(344, 36);
+            this.btnAddImg.TabIndex = 1;
+            this.btnAddImg.Text = "Agregar";
+            this.btnAddImg.UseVisualStyleBackColor = true;
+            this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
+            // 
+            // btnPrevImg
+            // 
+            this.btnPrevImg.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPrevImg.Location = new System.Drawing.Point(0, 10);
+            this.btnPrevImg.Name = "btnPrevImg";
+            this.btnPrevImg.Size = new System.Drawing.Size(23, 36);
+            this.btnPrevImg.TabIndex = 0;
+            this.btnPrevImg.Text = "<";
+            this.btnPrevImg.UseVisualStyleBackColor = true;
+            this.btnPrevImg.Click += new System.EventHandler(this.btnPrevImg_Click);
             // 
             // tbxImg
             // 
             this.tbxImg.AccessibleName = "txbImg";
-            this.tbxImg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbxImg.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbxImg.Location = new System.Drawing.Point(0, 0);
             this.tbxImg.Name = "tbxImg";
             this.tbxImg.Size = new System.Drawing.Size(196, 20);
-            this.tbxImg.TabIndex = 5;
+            this.tbxImg.TabIndex = 0;
+            this.tbxImg.TextChanged += new System.EventHandler(this.tbxImg_TextChanged);
             // 
             // splitContainer2
             // 
@@ -645,6 +712,7 @@
             this.splitContainer2.SplitterDistance = 196;
             this.splitContainer2.SplitterWidth = 20;
             this.splitContainer2.TabIndex = 0;
+            this.splitContainer2.TabStop = false;
             // 
             // AddArticle
             // 
@@ -727,6 +795,7 @@
             this.splitContainer16.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
             this.splitContainer16.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -770,5 +839,9 @@
         private System.Windows.Forms.SplitContainer splitContainer16;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbxImg;
+        private System.Windows.Forms.Button btnPrevImg;
+        private System.Windows.Forms.Button btnAddImg;
+        private System.Windows.Forms.Button btnNextImg;
+        private System.Windows.Forms.Panel panel1;
     }
 }

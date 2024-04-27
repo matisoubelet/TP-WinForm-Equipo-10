@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using ModelDomain;
 using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DBAccess
 {
@@ -205,7 +206,7 @@ namespace DBAccess
             }
         }
 
-        public void InsertArticle(Article article, Img image)
+        public void InsertArticle(Article article, List<Img> images)
         {
             try
             {
@@ -220,19 +221,21 @@ namespace DBAccess
             {
                 CloseConnection();
             }
-
-            try
+            foreach (Img img in images)
             {
-                SetQuery("Insert into IMAGENES values(" + image.articleID + ", '" + image.imageUrl + "')");
-                ExecuteAction();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                CloseConnection();
+                try
+                {
+                    SetQuery("Insert into IMAGENES values(" + img.articleID + ", '" + img.imageUrl + "')");
+                    ExecuteAction();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    CloseConnection();
+                }
             }
         }
     }
