@@ -14,6 +14,7 @@ namespace WinForm
         static private int previewArtSize = 125;
         ArticleDBAccess dbAccess = new ArticleDBAccess();
         List<ArticlePreview> artPreviews = new List<ArticlePreview>();
+        bool enabled = false;
 
         public Form1()
         {
@@ -42,41 +43,23 @@ namespace WinForm
         
         }
 
-        private void LoadDBArticles()
-        {
-            List<Article> listArticles = dbAccess.ListArticles();
-            List<Img> listImages = dbAccess.ListImages();
-            Img image = new Img();
-            flpLista.SuspendLayout();
-
-            foreach (Article article in listArticles)
-            {
-                foreach (Img img in listImages)
-                {
-                    if (article.id == img.articleID)
-                    {
-                        image = img;  
-                    }
-                }
-                Panel previewPanel = new Panel();
-                ArticlePreview artPreview = new ArticlePreview(article, image, ref previewPanel);
-                artPreviews.Add(artPreview);
-                flpLista.Controls.Add(previewPanel);
-            }
-            
-
-            flpLista.ResumeLayout(true);
-            UpdateFlpListaArticle();
-        }
-
-        //TODO: Carga los articulos filtrados.
         private void LoadFilteredDBArticles(List<Article> list)
         {
+            List<Article> listArticles;
             List<Img> image = dbAccess.ListImages();
             Img placeholder = new Img();
-            flpLista.SuspendLayout();
 
-            foreach (Article article in list)
+            if (enabled)
+            {
+                listArticles = list;
+            }
+            else { 
+                listArticles = dbAccess.ListArticles();
+            }
+
+
+            flpLista.SuspendLayout();
+            foreach (Article article in listArticles)
             {
                 foreach (Img img in image)
                 {
@@ -171,7 +154,8 @@ namespace WinForm
             {
                 // Si se selecciona "Todas", cargar todos los artículos sin filtrar por categoría
                 flpLista.Controls.Clear();
-                LoadDBArticles();
+                enabled = false;
+                LoadFilteredDBArticles(null);
             }
             else
             {
@@ -188,6 +172,7 @@ namespace WinForm
 
                     // Cargar los artículos filtrados
                     flpLista.Controls.Clear();
+                    enabled = true;
                     LoadFilteredDBArticles(filteredArticles);
                 }
             }
@@ -205,7 +190,8 @@ namespace WinForm
             {
                 // Si se selecciona "Todas", cargar todos los artículos sin filtrar por categoría
                 flpLista.Controls.Clear();
-                LoadDBArticles();
+                enabled = false;
+                LoadFilteredDBArticles( null);
             }
             else
             {
@@ -222,6 +208,7 @@ namespace WinForm
 
                     // Cargar los artículos filtrados
                     flpLista.Controls.Clear();
+                    enabled = true;
                     LoadFilteredDBArticles(filteredArticles);
                 }
             }
@@ -238,6 +225,7 @@ namespace WinForm
             //Si tiene datos aplica el filtro, sino muestra todos los artículos
             flpLista.Controls.Clear(); //Limpia la pantalla de los paneles
             filterList = artList.FindAll(x => (x.name.ToUpperInvariant().Contains(filter.ToUpperInvariant()))); //Guarda los articulos que coincidan con lo que se escribe en la txtBox
+            enabled = true;
             LoadFilteredDBArticles(filterList); //Muestra los paneles de articulo en pantalla
         }
     }
