@@ -69,6 +69,31 @@ namespace WinForm
             UpdateFlpListaArticle();
         }
 
+        //TODO: Carga los articulos filtrados.
+        private void LoadFilteredDBArticles(List<Article> list)
+        {
+            List<Img> image = dbAccess.ListImages();
+            Img placeholder = new Img();
+            flpLista.SuspendLayout();
+
+            foreach (Article article in list)
+            {
+                foreach (Img img in image)
+                {
+                    if (article.id == img.articleID)
+                    {
+                        placeholder = img;
+                    }
+                }
+                Panel previewPanel = new Panel();
+                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel);
+                artPreviews.Add(artPreview);
+                flpLista.Controls.Add(previewPanel);
+            }
+            flpLista.ResumeLayout(true);
+            UpdateFlpListaArticle();
+        }
+
         private void ArticleDetails(object sender, EventArgs e, int id)
         {
             //instanciar form
@@ -228,6 +253,19 @@ namespace WinForm
                 flpLista.ResumeLayout(true);
                 UpdateFlpListaArticle();
             }
+        }
+
+        //TODO: filtra rapido a medida que se escribe.
+        private void TxtBoxSearchForArticle_TextChanged(object sender, EventArgs e)
+        {
+            List<Article> artList = dbAccess.ListArticles(); //Trae de la db la lista completa de articulos
+            List<Article> filterList; //Crea una lista de articulos
+            string filter = TxtBoxSearchForArticle.Text; //Guarda el texto de la txtBox en la cadena filtro
+
+            //Si tiene datos aplica el filtro, sino muestra todos los artículos
+            flpLista.Controls.Clear(); //Limpia la pantalla de los paneles
+            filterList = artList.FindAll(x => (x.name.ToUpperInvariant().Contains(filter.ToUpperInvariant()))); //Guarda los articulos que coincidan con lo que se escribe en la txtBox
+            LoadFilteredDBArticles(filterList); //Muestra los paneles de articulo en pantalla
         }
     }
 }
