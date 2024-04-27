@@ -161,102 +161,75 @@ namespace WinForm
 
         }
 
+        //TODO: Filtro del comboBox de Marca.
         private void CmbBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
+            List<Brand> BrandList = dbAccess.ListBrands(); // Obtener la lista de categorías
+            string selectedBrandName = CmbBrand.Text;
 
-            if (CmbBrand.Text == "Todas")
+            if (selectedBrandName == "Todas")
             {
+                // Si se selecciona "Todas", cargar todos los artículos sin filtrar por categoría
                 flpLista.Controls.Clear();
                 LoadDBArticles();
             }
             else
             {
-                List<Article> list = dbAccess.ListArticles();
-                List<Img> image = dbAccess.ListImages();
-                Img placeholder = new Img();
+                // Buscar la categoría seleccionada en la lista de categorías
+                Brand selectedBrand = BrandList.Find(b => b.name == selectedBrandName);
 
-                flpLista.Controls.Clear();
-                flpLista.SuspendLayout();
-
-                foreach (Brand brand in dbAccess.ListBrands()) // recorre la lista db de marcas 
+                if (selectedBrand != null)
                 {
-                    if (brand.name == CmbBrand.Text) //compara los nombres de marcas con el indice de combobox
-                    {
-                        foreach (Article article in list) //itera la lista de articulos de la DB
-                        {
-                            if (brand.id == article.id) //Compara los id de articulo y marca
-                            {
-                                foreach (Img img in image) //itera la lista de Imagenes de la DB
-                                {
-                                    if (article.id == img.articleID) //Pregunta si hay coincidencia en el id del articulo y el id de la imagen
-                                    {
-                                        placeholder = img; //guarda la imagen de esa coincidencia en el articulo
-                                    }
-                                }
-                                Panel previewPanel = new Panel();
-                                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel);
-                                artPreviews.Add(artPreview);
-                                flpLista.Controls.Add(previewPanel);
-                            }
-                        }
+                    // Obtener el ID de la categoría seleccionada
+                    int selectedBrandId = selectedBrand.id;
 
-                    }
+                    // Obtener la lista de artículos filtrados por la categoría seleccionada
+                    List<Article> filteredArticles = dbAccess.ListArticles().FindAll(article => article.idBrand == selectedBrandId);
 
+                    // Cargar los artículos filtrados
+                    flpLista.Controls.Clear();
+                    LoadFilteredDBArticles(filteredArticles);
                 }
-                flpLista.ResumeLayout(true);
-                UpdateFlpListaArticle();
             }
+
+            UpdateFlpListaArticle();
         }
 
+        //TODO: Filtro del comboBox de Categoria.
         private void CmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            List<Category> categoryList = dbAccess.ListCategories(); // Obtener la lista de categorías
+            string selectedCategoryName = CmbCategory.Text;
 
-            if (CmbCategory.Text == "Todas")
+            if (selectedCategoryName == "Todas")
             {
+                // Si se selecciona "Todas", cargar todos los artículos sin filtrar por categoría
                 flpLista.Controls.Clear();
                 LoadDBArticles();
             }
             else
             {
-                List<Article> list = dbAccess.ListArticles();
-                List<Img> image = dbAccess.ListImages();
-                Img placeholder = new Img();
+                // Buscar la categoría seleccionada en la lista de categorías
+                Category selectedCategory = categoryList.Find(c => c.name == selectedCategoryName);
 
-                flpLista.Controls.Clear();
-                flpLista.SuspendLayout();
-
-                foreach (Category category in dbAccess.ListCategories()) // recorre la lista db de categorias
+                if (selectedCategory != null)
                 {
-                    if (category.name == CmbCategory.Text) //compara los nombres de las categorias con el indice de combobox
-                    {
-                        foreach (Article article in list) //itera la lista de articulos de la DB
-                        {
-                            if (category.id == article.id) //Compara los id de articulo y categoria
-                            {
-                                foreach (Img img in image) //itera la lista de Imagenes de la DB
-                                {
-                                    if (article.id == img.articleID) //Pregunta si hay coincidencia en el id del articulo y el id de la imagen
-                                    {
-                                        placeholder = img; //guarda la imagen de esa coincidencia en el articulo
-                                    }
-                                }
-                                Panel previewPanel = new Panel();
-                                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel);
-                                artPreviews.Add(artPreview);
-                                flpLista.Controls.Add(previewPanel);
-                            }
-                        }
+                    // Obtener el ID de la categoría seleccionada
+                    int selectedCategoryId = selectedCategory.id;
 
-                    }
+                    // Obtener la lista de artículos filtrados por la categoría seleccionada
+                    List<Article> filteredArticles = dbAccess.ListArticles().FindAll(article => article.idCategory == selectedCategoryId);
 
+                    // Cargar los artículos filtrados
+                    flpLista.Controls.Clear();
+                    LoadFilteredDBArticles(filteredArticles);
                 }
-                flpLista.ResumeLayout(true);
-                UpdateFlpListaArticle();
             }
+            UpdateFlpListaArticle();
         }
 
-        //TODO: filtra rapido a medida que se escribe.
-        private void TxtBoxSearchForArticle_TextChanged(object sender, EventArgs e)
+            //TODO: Filtra rapido a medida que se escribe.
+            private void TxtBoxSearchForArticle_TextChanged(object sender, EventArgs e)
         {
             List<Article> artList = dbAccess.ListArticles(); //Trae de la db la lista completa de articulos
             List<Article> filterList; //Crea una lista de articulos
