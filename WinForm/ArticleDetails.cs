@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ModelDomain;
 using System.Diagnostics;
+using System.Security.Policy;
 
 namespace WinForm
 {
@@ -70,17 +71,19 @@ namespace WinForm
                     tbxDesc.Text = this.article.desc;
                     tbxPrice.Text = this.article.price.ToString();
 
-                    cboxBrand.SelectedIndex = this.article.idBrand - 1; // No estoy seguro del porque no da bien a menos que tenga el -1
+                    cboxBrand.SelectedIndex = this.article.idBrand - 1;
                     cboxCat.SelectedIndex = this.article.idCategory - 1;
 
                     tbxImg.Text = images[0].imageUrl;
-                    pctrBox.Load(tbxImg.Text);
 
+                    try
+                    {
+                        pctrBox.Load(tbxImg.Text);
+                    }
+                    catch
+                    {
 
-                    // Falta que añada las imagenes, que se haga el tema de agregar mas imagenes de asi quererlo
-                    // Arreglar lo de brand y category, boton de borrar la imagen que este seleccionada en el momento
-                    //Validacionesss
-
+                    }
                 }
             }
         }
@@ -168,7 +171,20 @@ namespace WinForm
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (editMode)
+            {
+                DialogResult result = MessageBox.Show("Estás seguro de que querés eliminar este artículo?", "Eliminar artículo", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    dbAccess.DeleteArticle(article, images);
+                    this.Close();
+                }
+                
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void Editar_Click(object sender, EventArgs e)
@@ -185,8 +201,6 @@ namespace WinForm
 
                 btnAdd.Text = "Guardar";
                 btnBack.Text = "Eliminar";
-
-                tbxImg.Text = "";
 
                 tbxName.Enabled = true;
                 tbxCode.Enabled = true;
@@ -221,7 +235,17 @@ namespace WinForm
                 article.code = tbxCode.Text;
                 article.name = tbxName.Text;
                 article.desc = tbxDesc.Text;
-                article.price = float.Parse(tbxPrice.Text);
+
+                try
+                {
+                    article.price = float.Parse(tbxPrice.Text);
+                }
+                catch
+                {
+                    article.price = 0;
+                    tbxPrice.Text = "0";
+                }
+
                 article.idBrand = ((Brand)cboxBrand.SelectedItem).GetID();
                 article.idCategory = ((Category)cboxCat.SelectedItem).GetID();
 

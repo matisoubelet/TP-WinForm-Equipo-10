@@ -35,7 +35,16 @@ namespace WinForm
             newArticle.code = tbxCode.Text;
             newArticle.name = tbxName.Text;
             newArticle.desc = tbxDesc.Text;
-            newArticle.price = float.Parse(tbxPrice.Text);
+
+            try
+            {
+                newArticle.price = float.Parse(tbxPrice.Text);
+            }
+            catch
+            {
+                newArticle.price = 0;
+            }
+
             newArticle.idBrand = ((Brand)cboxBrand.SelectedItem).GetID();
             newArticle.idCategory = ((Category)cboxCat.SelectedItem).GetID();
             foreach (Img img in newImages)

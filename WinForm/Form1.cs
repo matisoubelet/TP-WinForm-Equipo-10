@@ -13,8 +13,13 @@ namespace WinForm
     {
         static private int previewArtSize = 125;
         ArticleDBAccess dbAccess = new ArticleDBAccess();
-        List<ArticlePreview> artPreviews = new List<ArticlePreview>();
-        bool enabled = false;
+
+        string searchFilter = "";
+        bool brandFilter = false;
+        bool categoryFilter = false;
+        int brandIndex = 0;
+        int categoryIndex = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -23,96 +28,86 @@ namespace WinForm
         private void Form1_Load(object sender, EventArgs e)
         {
             //inicializa los filter dropdowns
+            LoadDBBrandsCategories();
+        }
 
-            CmbCategory.Items.Add("Todas"); //esta opcion desactiva el filtro
+        private void LoadDBBrandsCategories ()
+        {
+            CmbBrand.Items.Clear();
+            CmbCategory.Items.Clear();
             CmbBrand.Items.Add("Todas"); //esta opcion desactiva el filtro
+            CmbCategory.Items.Add("Todas"); //esta opcion desactiva el filtro
 
-            foreach (Category category in dbAccess.ListCategories())
-            {
-                CmbCategory.Items.Add(category);
-            }            
             foreach (Brand brand in dbAccess.ListBrands())
             {
                 CmbBrand.Items.Add(brand);
             }
+            foreach (Category category in dbAccess.ListCategories())
+            {
+                CmbCategory.Items.Add(category);
+            }
 
-            CmbCategory.SelectedIndex = 0; //selecciona la primera opcion por defecto
             CmbBrand.SelectedIndex = 0; //selecciona la primera opcion por defecto
-
-        
+            CmbCategory.SelectedIndex = 0; //selecciona la primera opcion por defecto
         }
 
-        private void LoadFilteredDBArticles(List<Article> list)
+        private void LoadDBArticles()
         {
-            List<Article> listArticles;
-            List<Img> image = dbAccess.ListImages();
-            Img placeholder = new Img();
+            List<Article> listArticles = dbAccess.ListArticles();
+            List<Img> listImages = dbAccess.ListImages();
+            Img previewPic = new Img();
+            bool filtered = true;
 
-            if (enabled)
-            {
-                listArticles = list;
-            }
-            else
-            {
-                listArticles = dbAccess.ListArticles();
-            }
-
-
+            flpLista.Visible = false;
             flpLista.SuspendLayout();
+            flpLista.Controls.Clear();
+
             foreach (Article article in listArticles)
             {
-                foreach (Img img in image)
+                filtered = true;
+                if (brandFilter && brandIndex != article.idBrand)
                 {
-                    if (article.id == img.articleID)
-                    {
-                        placeholder = img;
-                    }
+                    filtered = false;
                 }
-                EventHandler clickEvent;
-                Panel previewPanel = new Panel();
-                clickEvent = (sender, EventArgs) => { ArticleDetails(sender, EventArgs, article.id); };
-                ArticlePreview artPreview = new ArticlePreview(article, placeholder, ref previewPanel, clickEvent);
-                artPreviews.Add(artPreview);
-                flpLista.Controls.Add(previewPanel);
+                if (categoryFilter && categoryIndex != article.idCategory)
+                {
+                    filtered = false;
+                }
+                if (searchFilter != "" && !article.name.ToUpperInvariant().Contains(searchFilter.ToUpperInvariant()))
+                {
+                    filtered = false;
+                }
+
+                if (filtered)
+                {
+                    foreach (Img img in listImages)
+                    {
+                        if (article.id == img.articleID)
+                        {
+                            previewPic = img;
+                            break;
+                        }
+                    }
+
+                    EventHandler clickEvent;
+                    clickEvent = (sender, EventArgs) => { ArticleDetails(sender, EventArgs, article.id); };
+
+                    Panel previewPanel = new Panel();
+                    ArticlePreview artPreview = new ArticlePreview(article, previewPic, ref previewPanel, clickEvent);
+                    flpLista.Controls.Add(previewPanel);
+                }
             }
-            flpLista.ResumeLayout(true);
             UpdateFlpListaArticle();
+            flpLista.ResumeLayout(true);
+            flpLista.Visible = true;
         }
-
-        //private void LoadDBArticles()
-        //{
-        //    List<Article> listArticles = dbAccess.ListArticles();
-        //    List<Img> listImages = dbAccess.ListImages();
-        //    Img image = new Img();
-        //    flpLista.SuspendLayout();
-
-        //    foreach (Article article in listArticles)
-        //    {
-        //        foreach (Img img in listImages)
-        //        {
-        //            if (article.id == img.articleID)
-        //            {
-        //                image = img;  
-        //            }
-        //        }
-        //        EventHandler clickEvent;
-        //        Panel previewPanel = new Panel();
-        //        clickEvent = (sender, EventArgs) => { ArticleDetails(sender, EventArgs, article.id); };
-        //        ArticlePreview artPreview = new ArticlePreview(article, image, ref previewPanel, clickEvent);
-        //        artPreviews.Add(artPreview);
-        //        flpLista.Controls.Add(previewPanel);
-        //    }
-            
-
-        //    flpLista.ResumeLayout(true);
-        //    UpdateFlpListaArticle();
-        //}
 
         private void ArticleDetails(object sender, EventArgs e, int id)
         {
             ArticleDetails articleDetails = new ArticleDetails(id);
             //cuando form corra su load, buscara en dbaccess el articulo
             articleDetails.ShowDialog();
+            LoadDBArticles();
         }
 
         private void AddNewArticle()
@@ -127,20 +122,20 @@ namespace WinForm
                 //si no es asi, creamos un nuevo panel, y una preview de articulo
                 //para vincular un articulo en la base de datos con un panel en la lista
                 EventHandler clickEvent;
-                Panel previewPanel = new Panel();
                 clickEvent = (sender, EventArgs) => { ArticleDetails(sender, EventArgs, addArticle.newArticle.id); };
+
+                Panel previewPanel = new Panel();
                 ArticlePreview artPreview = new ArticlePreview(addArticle.newArticle, addArticle.newImages[0], ref previewPanel, clickEvent);
                 //al crear la preview, se encarga de vincular el articleID con el panel en lista
 
                 flpLista.SuspendLayout();
                 flpLista.Controls.Add(previewPanel);
+                LoadDBArticles();
+                UpdateFlpListaArticle();
                 flpLista.ResumeLayout(true);
 
                 dbAccess.InsertArticle(addArticle.newArticle, addArticle.newImages);
 
-                UpdateFlpListaArticle();
-
-                //por aca deberiamos agregar el articulo creado a la base de datos, no solo en la app
             }
         }
 
@@ -178,83 +173,43 @@ namespace WinForm
 
         private void CmbBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            List<Brand> BrandList = dbAccess.ListBrands(); // Obtener la lista de categorías
-            string selectedBrandName = CmbBrand.Text;
-
-            if (selectedBrandName == "Todas")
+            if (CmbBrand.SelectedIndex == 0)
             {
-                // Si se selecciona "Todas", cargar todos los artículos sin filtrar por categoría
-                flpLista.Controls.Clear();
-                enabled = false;
-                LoadFilteredDBArticles(null);
+                brandFilter = false;
             }
             else
             {
-                // Buscar la categoría seleccionada en la lista de categorías
-                Brand selectedBrand = BrandList.Find(b => b.name == selectedBrandName);
-
-                if (selectedBrand != null)
-                {
-                    // Obtener el ID de la categoría seleccionada
-                    int selectedBrandId = selectedBrand.id;
-
-                    // Obtener la lista de artículos filtrados por la categoría seleccionada
-                    List<Article> filteredArticles = dbAccess.ListArticles().FindAll(article => article.idBrand == selectedBrandId);
-
-                    // Cargar los artículos filtrados
-                    flpLista.Controls.Clear();
-                    enabled = true;
-                    LoadFilteredDBArticles(filteredArticles);
-                }
+                brandFilter = true;
+                brandIndex = CmbBrand.SelectedIndex;
             }
+            LoadDBArticles();
         }
 
         private void CmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            List<Category> categoryList = dbAccess.ListCategories(); // Obtener la lista de categorías
-            string selectedCategoryName = CmbCategory.Text;
-
-            if (selectedCategoryName == "Todas")
+            if (CmbCategory.SelectedIndex == 0)
             {
-                // Si se selecciona "Todas", cargar todos los artículos sin filtrar por categoría
-                flpLista.Controls.Clear();
-                enabled = false;
-                LoadFilteredDBArticles(null);
+                categoryFilter = false;
             }
             else
             {
-                // Buscar la categoría seleccionada en la lista de categorías
-                Category selectedCategory = categoryList.Find(c => c.name == selectedCategoryName);
-
-                if (selectedCategory != null)
-                {
-                    // Obtener el ID de la categoría seleccionada
-                    int selectedCategoryId = selectedCategory.id;
-
-                    // Obtener la lista de artículos filtrados por la categoría seleccionada
-                    List<Article> filteredArticles = dbAccess.ListArticles().FindAll(article => article.idCategory == selectedCategoryId);
-
-                    // Cargar los artículos filtrados
-                    flpLista.Controls.Clear();
-                    enabled = true;
-                    LoadFilteredDBArticles(filteredArticles);
-                }
-            }            
+                categoryFilter = true;
+                categoryIndex = CmbCategory.SelectedIndex;
+            }
+            LoadDBArticles();
         }
 
         private void TxtBoxSearchForArticle_TextChanged(object sender, EventArgs e)
         {
-            List<Article> artList = dbAccess.ListArticles(); //Trae de la db la lista completa de articulos
-            List<Article> filterList; //Crea una lista de articulos
-            string filter = TxtBoxSearchForArticle.Text; //Guarda el texto de la txtBox en la cadena filtro
+            searchFilter = TxtBoxSearchForArticle.Text;
+            LoadDBArticles();
+        }
 
-            //Si tiene datos aplica el filtro, sino muestra todos los artículos
-            flpLista.Controls.Clear(); //Limpia la pantalla de los paneles
-            filterList = artList.FindAll(x => (x.name.ToUpperInvariant().Contains(filter.ToUpperInvariant()))); //Guarda los articulos que coincidan con lo que se escribe en la txtBox
-            enabled = true;
-            LoadFilteredDBArticles(filterList); //Muestra los paneles de articulo en pantalla
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            Config configForm = new Config();
+            configForm.ShowDialog();
+            LoadDBBrandsCategories();
         }
     }
 }

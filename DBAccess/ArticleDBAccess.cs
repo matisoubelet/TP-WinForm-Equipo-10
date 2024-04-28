@@ -243,7 +243,21 @@ namespace DBAccess
         {
             try
             {
-                SetQuery("update ARTICULOS set Codigo ='"+ article.code +"', Nombre = '"+article.name+"', Descripcion = '"+article.desc+"', IdMarca = "+article.idBrand+", IdCategoria = "+article.idCategory+", Precio = "+article.price+" Where Id ="+article.id+"");
+                SetQuery("Update ARTICULOS set Codigo ='" + article.code + "', Nombre = '" + article.name + "', Descripcion = '" + article.desc + "', IdMarca = " + article.idBrand + ", IdCategoria = " + article.idCategory + ", Precio = " + article.price + " Where Id =" + article.id);
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            try
+            {
+                SetQuery("Delete from IMAGENES where IdArticulo = " + article.id);
                 ExecuteAction();
             }
             catch (Exception ex)
@@ -258,7 +272,7 @@ namespace DBAccess
             {
                 try
                 {
-                    SetQuery("Insert into IMAGENES values(" + img.articleID + ", '" + img.imageUrl + "')");
+                    SetQuery("Insert into IMAGENES values(" + img.articleID + ", '" + img.imageUrl + "') ");
                     ExecuteAction();
                 }
                 catch (Exception ex)
@@ -269,6 +283,135 @@ namespace DBAccess
                 {
                     CloseConnection();
                 }
+            }
+        }        
+        
+        public void DeleteArticle(Article article, List<Img> images)
+        {
+            try
+            {
+                SetQuery("Delete from ARTICULOS where Id = " + article.id);
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            foreach (Img img in images)
+            {
+                try
+                {
+                    SetQuery("Delete from IMAGENES where ArticleId = " + img.articleID);
+                    ExecuteAction();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+            }
+        }
+        public void InsertBrand(string brandName)
+        {
+            try
+            {
+                SetQuery("Insert into MARCAS values('" + brandName + "')");
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }             
+        public void ModifyBrand(Brand brand)
+        {
+            try
+            {
+                SetQuery("Update MARCAS set Descripcion ='" + brand.name + "' Where Id = '" + brand.id + "'");
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public void DeleteBrand(int brandID)
+        {
+            try
+            {
+                SetQuery("Delete from MARCAS where Id = " + brandID);
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }        
+        public void InsertCategory(string categoryName)
+        {
+            try
+            {
+                SetQuery("Insert into CATEGORIAS values('" + categoryName + "')");
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public void ModifyCategory(Category category)
+        {
+            try
+            {
+                SetQuery("Update CATEGORIAS set Descripcion ='" + category.name + "' Where Id = '" + category.id + "'");
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+        public void DeleteCategory(int categoryID)
+        {
+            try
+            {
+                SetQuery("Delete from CATEGORIAS where Id = " + categoryID);
+                ExecuteAction();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
             }
         }
     }

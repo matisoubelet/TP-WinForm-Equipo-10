@@ -70,3 +70,5 @@ C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Copia Seguridad\WinForm-C-\WinForm\obj\Debug\WinForm.csproj.Up2Date
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Copia Seguridad\WinForm-C-\WinForm\obj\Debug\WinForm.exe
 C:\Users\matis\Desktop\Zerafin\Facultad\Materias\Programacion III\WinForm\Codigo\Copia Seguridad\WinForm-C-\WinForm\obj\Debug\WinForm.pdb
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.ArticleDetails.resources
+C:\Users\andre\OneDrive\Documentos\PROG3\Repositorios\actividad2\WinForm-C-\WinForm\obj\Debug\WinForm.Config.resources

@@ -157,7 +157,7 @@
             this.Cancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Cancelar.BackColor = System.Drawing.Color.LightCoral;
             this.Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Cancelar.Location = new System.Drawing.Point(11, 20);
+            this.Cancelar.Location = new System.Drawing.Point(30, 20);
             this.Cancelar.MaximumSize = new System.Drawing.Size(136, 43);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(136, 43);
@@ -665,7 +665,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddImg.Location = new System.Drawing.Point(24, 10);
             this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.Size = new System.Drawing.Size(152, 36);
+            this.btnAddImg.Size = new System.Drawing.Size(148, 36);
             this.btnAddImg.TabIndex = 1;
             this.btnAddImg.Text = "Agregar";
             this.btnAddImg.UseVisualStyleBackColor = true;

@@ -52,16 +52,16 @@ namespace WinForm
                 BackColor = Color.Thistle,
                 Dock = DockStyle.Fill,
                 Size = new Size(500, 500),
-                SizeMode = PictureBoxSizeMode.StretchImage
+                SizeMode = PictureBoxSizeMode.Zoom
             };
 
             try
             {
                 previewPic.Load(url);
             }
-            catch(Exception ex)
+            catch
             {
-                //throw ex;
+
             }
             
 
@@ -92,6 +92,11 @@ namespace WinForm
             artName.BringToFront();
             artPrice.BringToFront();
             previewPic.SendToBack();
+
+            panel.Cursor = Cursors.Hand;
+            previewPic.Cursor = Cursors.Hand;
+            artName.Cursor = Cursors.Hand;
+            artPrice.Cursor = Cursors.Hand;
 
             panel.Click += clickEvent;
             previewPic.Click += clickEvent;

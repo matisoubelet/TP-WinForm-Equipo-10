@@ -44,6 +44,7 @@
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.pnlLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -102,7 +103,7 @@
             this.pnlLista.Controls.Add(this.flpLista);
             this.pnlLista.Location = new System.Drawing.Point(15, 82);
             this.pnlLista.Name = "pnlLista";
-            this.pnlLista.Size = new System.Drawing.Size(773, 455);
+            this.pnlLista.Size = new System.Drawing.Size(773, 434);
             this.pnlLista.TabIndex = 5;
             // 
             // flpLista
@@ -113,7 +114,8 @@
             this.flpLista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpLista.Location = new System.Drawing.Point(0, 0);
             this.flpLista.Name = "flpLista";
-            this.flpLista.Size = new System.Drawing.Size(771, 453);
+            this.flpLista.Padding = new System.Windows.Forms.Padding(3);
+            this.flpLista.Size = new System.Drawing.Size(771, 432);
             this.flpLista.TabIndex = 0;
             this.flpLista.SizeChanged += new System.EventHandler(this.flpLista_SizeChanged);
             // 
@@ -123,7 +125,7 @@
             this.lblBrand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBrand.Location = new System.Drawing.Point(0, 0);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(96, 22);
+            this.lblBrand.Size = new System.Drawing.Size(95, 21);
             this.lblBrand.TabIndex = 5;
             this.lblBrand.Text = "Marca:";
             this.lblBrand.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,7 +136,7 @@
             this.lblCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCategory.Location = new System.Drawing.Point(0, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(96, 24);
+            this.lblCategory.Size = new System.Drawing.Size(95, 25);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Categoria:";
             this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,7 +149,7 @@
             this.CmbCategory.FormattingEnabled = true;
             this.CmbCategory.Location = new System.Drawing.Point(0, 0);
             this.CmbCategory.Name = "CmbCategory";
-            this.CmbCategory.Size = new System.Drawing.Size(178, 21);
+            this.CmbCategory.Size = new System.Drawing.Size(177, 21);
             this.CmbCategory.TabIndex = 4;
             this.CmbCategory.SelectedIndexChanged += new System.EventHandler(this.CmbCategory_SelectedIndexChanged);
             // 
@@ -161,7 +163,7 @@
             this.CmbBrand.Location = new System.Drawing.Point(0, 0);
             this.CmbBrand.Name = "CmbBrand";
             this.CmbBrand.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CmbBrand.Size = new System.Drawing.Size(178, 21);
+            this.CmbBrand.Size = new System.Drawing.Size(177, 21);
             this.CmbBrand.TabIndex = 1;
             this.CmbBrand.SelectedIndexChanged += new System.EventHandler(this.CmbBrand_SelectedIndexChanged);
             // 
@@ -214,22 +216,23 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.splitContainer5);
-            this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(3);
+            this.splitContainer3.Panel1.Padding = new System.Windows.Forms.Padding(3, 5, 5, 3);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer3.Panel2.Padding = new System.Windows.Forms.Padding(3);
+            this.splitContainer3.Panel2.Padding = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer3.Size = new System.Drawing.Size(284, 62);
-            this.splitContainer3.SplitterDistance = 28;
+            this.splitContainer3.SplitterDistance = 29;
+            this.splitContainer3.SplitterWidth = 2;
             this.splitContainer3.TabIndex = 0;
             // 
             // splitContainer5
             // 
             this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer5.IsSplitterFixed = true;
-            this.splitContainer5.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer5.Location = new System.Drawing.Point(3, 5);
             this.splitContainer5.Name = "splitContainer5";
             // 
             // splitContainer5.Panel1
@@ -239,8 +242,8 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.CmbBrand);
-            this.splitContainer5.Size = new System.Drawing.Size(278, 22);
-            this.splitContainer5.SplitterDistance = 96;
+            this.splitContainer5.Size = new System.Drawing.Size(276, 21);
+            this.splitContainer5.SplitterDistance = 95;
             this.splitContainer5.TabIndex = 9;
             // 
             // splitContainer6
@@ -257,8 +260,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.CmbCategory);
-            this.splitContainer6.Size = new System.Drawing.Size(278, 24);
-            this.splitContainer6.SplitterDistance = 96;
+            this.splitContainer6.Size = new System.Drawing.Size(276, 25);
+            this.splitContainer6.SplitterDistance = 95;
             this.splitContainer6.TabIndex = 9;
             // 
             // splitContainer4
@@ -277,7 +280,7 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.btnAgregar);
-            this.splitContainer4.Panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainer4.Panel2.Padding = new System.Windows.Forms.Padding(6);
             this.splitContainer4.Size = new System.Drawing.Size(772, 64);
             this.splitContainer4.SplitterDistance = 550;
             this.splitContainer4.SplitterWidth = 8;
@@ -287,13 +290,25 @@
             // 
             this.btnAgregar.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAgregar.Location = new System.Drawing.Point(5, 5);
+            this.btnAgregar.Location = new System.Drawing.Point(6, 6);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(202, 52);
+            this.btnAgregar.Size = new System.Drawing.Size(200, 50);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar Artículo";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfig.AutoSize = true;
+            this.btnConfig.Location = new System.Drawing.Point(706, 522);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(82, 23);
+            this.btnConfig.TabIndex = 9;
+            this.btnConfig.Text = "Configuración";
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // Form1
             // 
@@ -301,10 +316,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 549);
+            this.ClientSize = new System.Drawing.Size(800, 557);
+            this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.splitContainer4);
             this.Controls.Add(this.pnlLista);
-            this.MinimumSize = new System.Drawing.Size(500, 250);
+            this.MinimumSize = new System.Drawing.Size(500, 468);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo de Artículos";
@@ -337,6 +353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -358,6 +375,7 @@
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Button btnConfig;
     }
 }
 
